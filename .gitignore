@@ -8,11 +8,10 @@
 /dist/
 
 # ---------------------------------------------------------------------------
-# Demo recordings (uploaded as GitHub attachments, not committed)
+# Raw screen recordings stay local; compressed demos in demo/ are committed.
 # ---------------------------------------------------------------------------
-*.mov
-*.mp4
-/demo/
+/*.mov
+/*.mp4
 
 # ---------------------------------------------------------------------------
 # Patient data — never committed

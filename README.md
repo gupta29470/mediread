@@ -31,6 +31,15 @@ No report data leaves the device. There is no cloud inference, no telemetry and 
 - **Reproducible pipeline** — versioned knowledge package, versioned SFT dataset, LoRA
   fine-tuning script and a pinned LiteRT-LM export environment.
 
+## Demos
+
+Short screen recordings of the two models on Android (click a card to play the MP4):
+
+| Medi Lite — Compact AI | Medi Super — Detailed AI |
+|---|---|
+| [![Medi Lite demo](demo/mediread-lite-poster.jpg)](https://cdn.jsdelivr.net/gh/gupta29470/mediread@master/demo/mediread-lite.mp4) | [![Medi Super demo](demo/mediread-super-poster.jpg)](https://cdn.jsdelivr.net/gh/gupta29470/mediread@master/demo/mediread-super.mp4) |
+| 613.7 MB · INT8 · activation + offline use | 2.39 GB · FP32 · download, switch and AI rewrite |
+
 ## What this project demonstrates
 
 - **On-device ML end to end** — page routing between embedded text and OCR, structured extraction,
