@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mediread"
+version = "0.1.0"
+description = "Privacy-first ingestion of laboratory reports (PDF/image) with provenance-preserving extraction."
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "jsonschema>=4.21",
+    "pymupdf==2.1",
+    "pillow>=10.4",
+    "numpy>=1.26,<3",
+]
+
+[project.optional-dependencies]
+ocr-tesseract = ["pytesseract>=0.3.13", "pyspellchecker>=0.8.1"]
+ocr-rapid = ["rapidocr-onnxruntime>=1.4.4", "onnxruntime>=1.20"]
+ocr-paddle = ["paddleocr>=3.0", "paddlepaddle>=3.0"]
+ocr-vision = ["pyobjc-framework-Vision>=10.3", "pyobjc-framework-Quartz>=10.3"]
+dev = ["pytest>=8.3", "pytest-cov>=5.0", "pytest-timeout>=2.3", "pyspellchecker>=0.8.1"]
+eval = ["jiwer>=3.0.4", "pandas>=2.2", "matplotlib>=3.9"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning"]
+markers = [
+    "slow: tests that render pages or run OCR models",
+    "ocr: tests requiring an OCR engine",
+]
+
+[project.scripts]
+mediread = "mediread.cli:main"

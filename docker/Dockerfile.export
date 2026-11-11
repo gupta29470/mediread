@@ -1,0 +1,21 @@
+# Reproducible Linux environment for the Qwen3 -> .litertlm export.
+# Why Linux: on macOS the litert-torch converter and TensorFlow register the same
+# LLVM command-line options and the process aborts (SIGABRT) before conversion.
+# Build:  docker build -f docker/Dockerfile.export -t mediread-export .
+# Run:    docker run --rm -v "$PWD:/work" -w /work mediread-export \
+#             bash scripts/export_litertlm.sh
+FROM python:3.11-slim
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PIP_NO_CACHE_DIR=1 \
+    TF_CPP_MIN_LOG_LEVEL=3 \
+    PYTHONUNBUFFERED=1
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        build-essential git curl libgomp1 && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY requirements-export.txt /tmp/requirements-export.txt
+RUN pip install --upgrade pip && pip install -r /tmp/requirements-export.txt
+
+WORKDIR /work

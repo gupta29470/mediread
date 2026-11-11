@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mediread.app/schema/knowledge-package/1",
+  "title": "MediRead knowledge package",
+  "description": "Authoring and interchange format for the MediRead laboratory-test knowledge package. One file holds sources, tests, aliases, evidence and terminology; the runtime SQLite package is built from it.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "package", "sources", "tests"],
+  "properties": {
+    "schema_version": {"const": "mediread.knowledge/1"},
+    "package": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["knowledge_version", "generated_at", "content_hash"],
+      "properties": {
+        "knowledge_version": {"type": "string", "pattern": "^[0-9]{4}\\.[0-9]{2}\\.[0-9]+$"},
+        "generated_at": {"type": "string", "format": "date-time"},
+        "content_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "notes": {"type": "string", "maxLength": 2000},
+        "default_language": {"type": "string", "enum": ["en"]}
+      }
+    },
+    "sources": {"type": "array", "items": {"$ref": "#/$defs/source"}},
+    "tests": {"type": "array", "items": {"$ref": "#/$defs/test"}},
+    "aliases": {"type": "array", "items": {"$ref": "#/$defs/alias"}},
+    "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}},
+    "terminology": {"type": "array", "items": {"$ref": "#/$defs/term"}}
+  },
+  "$defs": {
+    "status": {"enum": ["draft", "reviewed", "approved"]},
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_id", "title", "publisher", "source_url", "access_date", "content_license", "source_type"],
+      "properties": {
+        "source_id": {"type": "string", "pattern": "^[a-z0-9_]{3,64}$"},
+        "title": {"type": "string", "minLength": 3, "maxLength": 300},
+        "publisher": {"type": "string", "minLength": 2, "maxLength": 200},
+        "source_url": {"type": "string", "pattern": "^https?://"},
+        "publication_date": {"type": ["string", "null"], "pattern": "^[0-9]{4}(-[0-9]{2}){0,2}$"},
+        "access_date": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+        "content_license": {"type": "string", "minLength": 3, "maxLength": 200},
+        "attribution_requirements": {"type": ["string", "null"], "maxLength": 500},
+        "source_type": {"enum": ["government", "academic", "professional-society", "peer-reviewed", "reference-work", "other"]},
+        "source_notes": {"type": ["string", "null"], "maxLength": 2000}
+      }
+    },
+    "test": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["test_id", "canonical_name", "category", "what_it_measures", "why_it_is_ordered", "limitations", "review_status", "content_version"],
+      "properties": {
+        "test_id": {"type": "string", "pattern": "^[a-z0-9_]{2,64}$"},
+        "canonical_name": {"type": "string", "minLength": 2, "maxLength": 120},
+        "category": {"type": "string", "minLength": 2, "maxLength": 80},
+        "what_it_measures": {"type": "string", "minLength": 20, "maxLength": 800},
+        "why_it_is_ordered": {"type": "string", "minLength": 10, "maxLength": 800},
+        "general_interpretation_high": {"type": ["string", "null"], "maxLength": 800},
+        "general_interpretation_low": {"type": ["string", "null"], "maxLength": 800},
+        "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 10, "maxLength": 600}},
+        "related_test_ids": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9_]{2,64}$"}},
+        "review_status": {"$ref": "#/$defs/status"},
+        "content_version": {"type": "integer", "minimum": 1},
+        "language": {"type": "string", "enum": ["en"]},
+        "synonyms": {"type": "array", "items": {"type": "string", "minLength": 2, "maxLength": 120}}
+      }
+    },
+    "alias": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["test_id", "alias"],
+      "properties": {
+        "test_id": {"type": "string"},
+        "alias": {"type": "string", "minLength": 2, "maxLength": 120},
+        "alias_type": {"enum": ["canonical", "synonym", "abbreviation", "report-label"]},
+        "language": {"enum": ["en"]},
+        "source": {"type": ["string", "null"], "maxLength": 120}
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_id", "test_id", "source_id", "claim_field", "supporting_excerpt_or_reference", "review_status"],
+      "properties": {
+        "evidence_id": {"type": "string", "pattern": "^[a-z0-9_]{3,80}$"},
+        "test_id": {"type": "string"},
+        "source_id": {"type": "string"},
+        "claim_field": {"enum": ["what_it_measures", "why_it_is_ordered", "general_interpretation_high", "general_interpretation_low", "limitations"]},
+        "supporting_excerpt_or_reference": {"type": "string", "minLength": 5, "maxLength": 1200},
+        "review_status": {"$ref": "#/$defs/status"}
+      }
+    },
+    "term": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["term_id", "technical_term", "plain_language_explanation", "language", "source_id"],
+      "properties": {
+        "term_id": {"type": "string", "pattern": "^[a-z0-9_]{3,64}$"},
+        "technical_term": {"type": "string", "minLength": 2, "maxLength": 120},
+        "plain_language_explanation": {"type": "string", "minLength": 5, "maxLength": 600},
+        "language": {"enum": ["en"]},
+        "source_id": {"type": "string"}
+      }
+    }
+  }
+}

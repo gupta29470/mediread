@@ -1,0 +1,36 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 337 >>
+stream
+BT /F1 12 Tf 72 760 Td (HEMOGLOBIN 9.0 g/dL 12.0 - 15.0) Tj ET
+BT /F1 12 Tf 72 738 Td (TOTAL LEUCOCYTES COUNT 6.69 X10^3/uL 4.0 - 10.0) Tj ET
+BT /F1 12 Tf 72 716 Td (PLATELET COUNT 250 X10^3/uL 150 - 410) Tj ET
+BT /F1 12 Tf 72 694 Td (FASTING BLOOD SUGAR 92.9 mg/dL) Tj ET
+BT /F1 12 Tf 72 672 Td (MYSTERY MARKER 4.2 U/L 1.0 - 2.0) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000628 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+698
+%%EOF

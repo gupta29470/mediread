@@ -1,0 +1,2436 @@
+{
+  "R01_normal_verified": {
+    "result_id": "fd4739a4c2c0",
+    "report_id": "0bd1dd6697b0d070",
+    "page": 2,
+    "section": "CBC / Hemogram",
+    "test_name": "TOTAL LEUCOCYTES COUNT",
+    "test_id": "total_leucocyte_count",
+    "canonical_name": "Total white blood cell count",
+    "knowledge_status": "complete",
+    "knowledge_coverage": "complete",
+    "knowledge_review_status": "approved",
+    "status": "explained",
+    "permitted": {
+      "what_this_test_measures": true,
+      "your_reported_result": true,
+      "comparison_with_reference": true,
+      "what_this_may_generally_indicate": true,
+      "important_limitations": true,
+      "sources": true
+    },
+    "gates": {
+      "identify_test": true,
+      "interpret_value": true,
+      "unit_comparison": true,
+      "range_comparison": true
+    },
+    "blocked_reasons": [],
+    "comparison": {
+      "state": "within_range",
+      "value_text": "6.69",
+      "unit_text": "X 10\u00b3 / \u00b5L",
+      "reference_text": "4.0-10.0",
+      "low": 4.0,
+      "high": 10.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "operator": null,
+      "stratified": false,
+      "description": "The reported value is inside the reference interval printed on your report (4.0-10.0 X 10\u00b3 / \u00b5L)."
+    },
+    "allowed_numbers": [
+      "10",
+      "10.0",
+      "4.0",
+      "6.69"
+    ],
+    "sections": [
+      {
+        "key": "what_this_test_measures",
+        "kind": "education",
+        "permitted": true,
+        "text": "Total white blood cell count. White blood cells are part of the immune system and help the body fight infection and other diseases; a complete blood count measures the total number in a volume of blood. It is used in routine checks and to monitor infections, immune conditions and treatments that affect blood cells.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cbc",
+          "mp_lab_differential"
+        ],
+        "partial": false
+      },
+      {
+        "key": "your_reported_result",
+        "kind": "fact",
+        "permitted": true,
+        "text": "Your report lists 6.69 X 10\u00b3 / \u00b5L for TOTAL LEUCOCYTES COUNT.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "comparison_with_reference",
+        "kind": "comparison",
+        "permitted": true,
+        "text": "The reported value is inside the reference interval printed on your report (4.0-10.0 X 10\u00b3 / \u00b5L).",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "what_this_may_generally_indicate",
+        "kind": "education",
+        "permitted": true,
+        "text": "The result is the total number of white blood cells per volume of blood. This is general education about the test, not a statement about your health.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cbc",
+          "mp_lab_differential"
+        ],
+        "partial": false
+      },
+      {
+        "key": "important_limitations",
+        "kind": "limitation",
+        "permitted": true,
+        "text": "The reference interval printed on your report is specific to the laboratory that produced it; intervals from other laboratories are not interchangeable. A result outside the printed interval may or may not reflect a health problem, and a result inside the interval does not by itself guarantee health. MedlinePlus notes that abnormal white-cell results do not always mean a condition that needs treatment; injury, stress, smoking and alcohol can also affect the count. MediRead does not have your symptoms, medical history, medicines or other test results, and cannot assess how urgent any result is.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "sources",
+        "kind": "reference",
+        "permitted": true,
+        "text": "Complete Blood Count (CBC) \u2014 MedlinePlus, U.S. National Library of Medicine. https://medlineplus.gov/lab-tests/complete-blood-count-cbc/ (accessed 2026-11-07). Blood Differential \u2014 MedlinePlus, U.S. National Library of Medicine. https://medlineplus.gov/lab-tests/blood-differential/ (accessed 2026-11-07). Source: MedlinePlus, National Library of Medicine.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cbc",
+          "mp_lab_differential"
+        ],
+        "partial": false
+      }
+    ],
+    "warnings": [],
+    "facts": {
+      "value_text": "6.69",
+      "unit_text": "X 10\u00b3 / \u00b5L",
+      "reference_text": "4.0-10.0",
+      "value_kind": "numeric",
+      "comparison_state": "within_range"
+    }
+  },
+  "R02_above_range": {
+    "result_id": "fdc47671c3ba",
+    "report_id": "0bd1dd6697b0d070",
+    "page": 2,
+    "section": "CBC / Hemogram",
+    "test_name": "RED CELL DISTRIBUTION WIDTH (RDW-CV)",
+    "test_id": null,
+    "canonical_name": "Red cell distribution width (RDW-CV)",
+    "knowledge_status": "complete",
+    "knowledge_coverage": "complete",
+    "knowledge_review_status": "approved",
+    "status": "explained",
+    "permitted": {
+      "what_this_test_measures": true,
+      "your_reported_result": true,
+      "comparison_with_reference": true,
+      "what_this_may_generally_indicate": true,
+      "important_limitations": true,
+      "sources": true
+    },
+    "gates": {
+      "identify_test": true,
+      "interpret_value": true,
+      "unit_comparison": true,
+      "range_comparison": true
+    },
+    "blocked_reasons": [],
+    "comparison": {
+      "state": "above_range",
+      "value_text": "16.3",
+      "unit_text": "%",
+      "reference_text": "11.6-14.0",
+      "low": 11.6,
+      "high": 14.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "operator": null,
+      "stratified": false,
+      "description": "The reported value is above the reference interval printed on your report (11.6-14.0 %)."
+    },
+    "allowed_numbers": [
+      "11.6",
+      "14.0",
+      "16.3"
+    ],
+    "sections": [
+      {
+        "key": "what_this_test_measures",
+        "kind": "education",
+        "permitted": true,
+        "text": "Red cell distribution width (RDW-CV). RDW measures differences in the size of your red blood cells; healthy red cells are usually about the same size. It is part of a complete blood count and is usually interpreted with the other red-cell indices.",
+        "reason": null,
+        "sources": [
+          "mp_lab_rbc_indices"
+        ],
+        "partial": false
+      },
+      {
+        "key": "your_reported_result",
+        "kind": "fact",
+        "permitted": true,
+        "text": "Your report lists 16.3 % for RED CELL DISTRIBUTION WIDTH (RDW-CV).",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "comparison_with_reference",
+        "kind": "comparison",
+        "permitted": true,
+        "text": "The reported value is above the reference interval printed on your report (11.6-14.0 %).",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "what_this_may_generally_indicate",
+        "kind": "education",
+        "permitted": true,
+        "text": "A higher RDW indicates more variation in red-cell size. This is general education about the test, not a statement about your health.",
+        "reason": null,
+        "sources": [
+          "mp_lab_rbc_indices"
+        ],
+        "partial": false
+      },
+      {
+        "key": "important_limitations",
+        "kind": "limitation",
+        "permitted": true,
+        "text": "The reference interval printed on your report is specific to the laboratory that produced it; intervals from other laboratories are not interchangeable. A result outside the printed interval may or may not reflect a health problem, and a result inside the interval does not by itself guarantee health. MedlinePlus notes that RDW alone is not enough to make a diagnosis and is combined with other results. MediRead does not have your symptoms, medical history, medicines or other test results, and cannot assess how urgent any result is.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "sources",
+        "kind": "reference",
+        "permitted": true,
+        "text": "Red Blood Cell (RBC) Indices \u2014 MedlinePlus, U.S. National Library of Medicine. https://medlineplus.gov/lab-tests/red-blood-cell-rbc-indices/ (accessed 2026-11-07). Source: MedlinePlus, National Library of Medicine.",
+        "reason": null,
+        "sources": [
+          "mp_lab_rbc_indices"
+        ],
+        "partial": false
+      }
+    ],
+    "warnings": [],
+    "facts": {
+      "value_text": "16.3",
+      "unit_text": "%",
+      "reference_text": "11.6-14.0",
+      "value_kind": "numeric",
+      "comparison_state": "above_range"
+    }
+  },
+  "R03_below_range": {
+    "result_id": "5f7598c1bcd8",
+    "report_id": "0bd1dd6697b0d070",
+    "page": 2,
+    "section": "CBC / Hemogram",
+    "test_name": "HEMOGLOBIN",
+    "test_id": "hemoglobin",
+    "canonical_name": "Haemoglobin",
+    "knowledge_status": "complete",
+    "knowledge_coverage": "complete",
+    "knowledge_review_status": "approved",
+    "status": "explained",
+    "permitted": {
+      "what_this_test_measures": true,
+      "your_reported_result": true,
+      "comparison_with_reference": true,
+      "what_this_may_generally_indicate": true,
+      "important_limitations": true,
+      "sources": true
+    },
+    "gates": {
+      "identify_test": true,
+      "interpret_value": true,
+      "unit_comparison": true,
+      "range_comparison": true
+    },
+    "blocked_reasons": [],
+    "comparison": {
+      "state": "below_range",
+      "value_text": "9",
+      "unit_text": "g/dL",
+      "reference_text": "12.0-15.0",
+      "low": 12.0,
+      "high": 15.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "operator": null,
+      "stratified": false,
+      "description": "The reported value is below the reference interval printed on your report (12.0-15.0 g/dL)."
+    },
+    "allowed_numbers": [
+      "12.0",
+      "15.0",
+      "9"
+    ],
+    "sections": [
+      {
+        "key": "what_this_test_measures",
+        "kind": "education",
+        "permitted": true,
+        "text": "Haemoglobin. Haemoglobin is the iron-rich protein inside red blood cells that carries oxygen from the lungs to the rest of the body. It is part of a complete blood count and is used to look for anaemia and to monitor conditions that affect red blood cells.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cbc"
+        ],
+        "partial": false
+      },
+      {
+        "key": "your_reported_result",
+        "kind": "fact",
+        "permitted": true,
+        "text": "Your report lists 9 g/dL for HEMOGLOBIN.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "comparison_with_reference",
+        "kind": "comparison",
+        "permitted": true,
+        "text": "The reported value is below the reference interval printed on your report (12.0-15.0 g/dL).",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "what_this_may_generally_indicate",
+        "kind": "education",
+        "permitted": true,
+        "text": "The result is the amount of haemoglobin in a measured volume of blood, usually reported in grams per decilitre (g/dL). A haemoglobin result below the printed interval is commonly described as low. MedlinePlus notes that abnormal red-cell, haemoglobin or haematocrit levels may be a sign of dehydration, anaemia, heart disease or too little iron, and that other factors can affect results. This is general education about the test, not a statement about your health.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cbc"
+        ],
+        "partial": false
+      },
+      {
+        "key": "important_limitations",
+        "kind": "limitation",
+        "permitted": true,
+        "text": "The reference interval printed on your report is specific to the laboratory that produced it; intervals from other laboratories are not interchangeable. A result outside the printed interval may or may not reflect a health problem, and a result inside the interval does not by itself guarantee health. Haemoglobin can be affected by hydration and by factors such as diet, activity, medicines and menstruation (MedlinePlus). MediRead does not have your symptoms, medical history, medicines or other test results, and cannot assess how urgent any result is.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "sources",
+        "kind": "reference",
+        "permitted": true,
+        "text": "Complete Blood Count (CBC) \u2014 MedlinePlus, U.S. National Library of Medicine. https://medlineplus.gov/lab-tests/complete-blood-count-cbc/ (accessed 2026-11-07). Source: MedlinePlus, National Library of Medicine.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cbc"
+        ],
+        "partial": false
+      }
+    ],
+    "warnings": [],
+    "facts": {
+      "value_text": "9",
+      "unit_text": "g/dL",
+      "reference_text": "12.0-15.0",
+      "value_kind": "numeric",
+      "comparison_state": "below_range"
+    }
+  },
+  "R04_missing_unit": {
+    "result_id": "76a8582b278c",
+    "report_id": "79bd8cfc0570272b",
+    "page": 1,
+    "section": "Haemoglobin electrophoresis",
+    "test_name": "Hb A",
+    "test_id": null,
+    "canonical_name": "Haemoglobin A",
+    "knowledge_status": "complete",
+    "knowledge_coverage": "complete",
+    "knowledge_review_status": "approved",
+    "status": "partially_explained",
+    "permitted": {
+      "what_this_test_measures": true,
+      "your_reported_result": true,
+      "comparison_with_reference": false,
+      "what_this_may_generally_indicate": true,
+      "important_limitations": true,
+      "sources": true
+    },
+    "gates": {
+      "identify_test": true,
+      "interpret_value": true,
+      "unit_comparison": false,
+      "range_comparison": false
+    },
+    "blocked_reasons": [
+      "comparison_with_reference: reference is missing; unit is missing"
+    ],
+    "comparison": {
+      "state": "blocked_by_gate",
+      "value_text": "95.9",
+      "unit_text": null,
+      "reference_text": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "operator": null,
+      "stratified": false,
+      "description": null
+    },
+    "allowed_numbers": [
+      "95.9"
+    ],
+    "sections": [
+      {
+        "key": "what_this_test_measures",
+        "kind": "education",
+        "permitted": true,
+        "text": "Haemoglobin A. Haemoglobin A is the most common type of haemoglobin in healthy adults. It is measured as part of haemoglobin electrophoresis.",
+        "reason": null,
+        "sources": [
+          "mp_lab_electrophoresis"
+        ],
+        "partial": false
+      },
+      {
+        "key": "your_reported_result",
+        "kind": "fact",
+        "permitted": true,
+        "text": "Your report lists 95.9 for Hb A, with no unit printed.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "comparison_with_reference",
+        "kind": "comparison",
+        "permitted": false,
+        "text": null,
+        "reason": "reference is missing; unit is missing",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "what_this_may_generally_indicate",
+        "kind": "education",
+        "permitted": true,
+        "text": "The result is usually a percentage of total haemoglobin. This is general education about the test, not a statement about your health.",
+        "reason": null,
+        "sources": [
+          "mp_lab_electrophoresis"
+        ],
+        "partial": false
+      },
+      {
+        "key": "important_limitations",
+        "kind": "limitation",
+        "permitted": true,
+        "text": "The reference interval printed on your report is specific to the laboratory that produced it; intervals from other laboratories are not interchangeable. A result outside the printed interval may or may not reflect a health problem, and a result inside the interval does not by itself guarantee health. The unit for this result could not be confirmed. MediRead does not have your symptoms, medical history, medicines or other test results, and cannot assess how urgent any result is.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "sources",
+        "kind": "reference",
+        "permitted": true,
+        "text": "Hemoglobin Electrophoresis \u2014 MedlinePlus, U.S. National Library of Medicine. https://medlineplus.gov/lab-tests/hemoglobin-electrophoresis/ (accessed 2026-11-07). Source: MedlinePlus, National Library of Medicine.",
+        "reason": null,
+        "sources": [
+          "mp_lab_electrophoresis"
+        ],
+        "partial": false
+      }
+    ],
+    "warnings": [
+      "comparison with the reference range withheld"
+    ],
+    "facts": {
+      "value_text": "95.9",
+      "unit_text": null,
+      "reference_text": null,
+      "value_kind": "numeric",
+      "comparison_state": "blocked_by_gate"
+    }
+  },
+  "R05_missing_reference": {
+    "result_id": "ecd72c8f6995",
+    "report_id": "c66749371af7e28c",
+    "page": 16,
+    "section": "Glucose and HbA1c",
+    "test_name": "FASTING BLOOD SUGAR(GLUCOSE)",
+    "test_id": null,
+    "canonical_name": "Fasting blood glucose",
+    "knowledge_status": "partial",
+    "knowledge_coverage": "partial",
+    "knowledge_review_status": "unsupported",
+    "status": "partially_explained",
+    "permitted": {
+      "what_this_test_measures": true,
+      "your_reported_result": true,
+      "comparison_with_reference": false,
+      "what_this_may_generally_indicate": true,
+      "important_limitations": true,
+      "sources": true
+    },
+    "gates": {
+      "identify_test": true,
+      "interpret_value": true,
+      "unit_comparison": true,
+      "range_comparison": false
+    },
+    "blocked_reasons": [
+      "comparison_with_reference: reference is missing"
+    ],
+    "comparison": {
+      "state": "blocked_by_gate",
+      "value_text": "92.9",
+      "unit_text": "mg/dL",
+      "reference_text": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "operator": null,
+      "stratified": false,
+      "description": null
+    },
+    "allowed_numbers": [
+      "92.9"
+    ],
+    "sections": [
+      {
+        "key": "what_this_test_measures",
+        "kind": "education",
+        "permitted": true,
+        "text": "Fasting blood glucose. Glucose is the body's main source of energy; a fasting glucose test measures the amount of glucose in the blood after not eating for a period. It is used to screen for or monitor diabetes. MediRead has only a general description for this test because the approved sources do not cover it in detail.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cmp",
+          "mp_lab_hba1c"
+        ],
+        "partial": true
+      },
+      {
+        "key": "your_reported_result",
+        "kind": "fact",
+        "permitted": true,
+        "text": "Your report lists 92.9 mg/dL for FASTING BLOOD SUGAR(GLUCOSE).",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "comparison_with_reference",
+        "kind": "comparison",
+        "permitted": false,
+        "text": null,
+        "reason": "reference is missing",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "what_this_may_generally_indicate",
+        "kind": "education",
+        "permitted": true,
+        "text": "The result is a concentration, usually in mg/dL or mmol/L. This is general education about the test, not a statement about your health.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cmp",
+          "mp_lab_hba1c"
+        ],
+        "partial": true
+      },
+      {
+        "key": "important_limitations",
+        "kind": "limitation",
+        "permitted": true,
+        "text": "The reference interval printed on your report is specific to the laboratory that produced it; intervals from other laboratories are not interchangeable. A result outside the printed interval may or may not reflect a health problem, and a result inside the interval does not by itself guarantee health. MediRead does not have your symptoms, medical history, medicines or other test results, and cannot assess how urgent any result is.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "sources",
+        "kind": "reference",
+        "permitted": true,
+        "text": "Comprehensive Metabolic Panel (CMP) \u2014 MedlinePlus, U.S. National Library of Medicine. https://medlineplus.gov/lab-tests/comprehensive-metabolic-panel-cmp/ (accessed 2026-11-07). Hemoglobin A1C (HbA1c) Test \u2014 MedlinePlus, U.S. National Library of Medicine. https://medlineplus.gov/lab-tests/hemoglobin-a1c-hba1c-test/ (accessed 2026-11-07). Source: MedlinePlus, National Library of Medicine.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cmp",
+          "mp_lab_hba1c"
+        ],
+        "partial": false
+      }
+    ],
+    "warnings": [
+      "comparison with the reference range withheld",
+      "knowledge entry is partial"
+    ],
+    "facts": {
+      "value_text": "92.9",
+      "unit_text": "mg/dL",
+      "reference_text": null,
+      "value_kind": "numeric",
+      "comparison_state": "blocked_by_gate"
+    }
+  },
+  "R06_stratified_reference": {
+    "result_id": "27ddaeddae8f",
+    "report_id": "4f16a4444054fdfe",
+    "page": 9,
+    "section": "Kidney function",
+    "test_name": "EST. GLOMERULAR FILTRATION RATE (eGFR)",
+    "test_id": "egfr",
+    "canonical_name": "Estimated glomerular filtration rate (eGFR)",
+    "knowledge_status": "partial",
+    "knowledge_coverage": "partial",
+    "knowledge_review_status": "unsupported",
+    "status": "partially_explained",
+    "permitted": {
+      "what_this_test_measures": true,
+      "your_reported_result": true,
+      "comparison_with_reference": false,
+      "what_this_may_generally_indicate": true,
+      "important_limitations": true,
+      "sources": true
+    },
+    "gates": {
+      "identify_test": true,
+      "interpret_value": true,
+      "unit_comparison": true,
+      "range_comparison": false
+    },
+    "blocked_reasons": [
+      "comparison_with_reference: reference is stratified; it is not a single numeric interval"
+    ],
+    "comparison": {
+      "state": "blocked_by_gate",
+      "value_text": "112",
+      "unit_text": "mL/min/1.73 m2",
+      "reference_text": ">= 90 : Normal | 60 - 89 : Mild Decrease | 45 - 59 : Mild to Moderate Decrease | 30 - 44 : Moderate to Severe Decrease | 15 - 29 : Severe Decrease",
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "operator": null,
+      "stratified": true,
+      "description": null
+    },
+    "allowed_numbers": [
+      "1.73",
+      "112",
+      "15",
+      "2",
+      "29",
+      "30",
+      "44",
+      "45",
+      "59",
+      "60",
+      "89",
+      "90"
+    ],
+    "sections": [
+      {
+        "key": "what_this_test_measures",
+        "kind": "education",
+        "permitted": true,
+        "text": "Estimated glomerular filtration rate (eGFR). eGFR is a calculated estimate of how well the kidneys filter, derived from a creatinine measurement. It is reported alongside creatinine to help describe kidney function. MediRead has only a general description for this test because the approved sources do not cover it in detail.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cmp"
+        ],
+        "partial": true
+      },
+      {
+        "key": "your_reported_result",
+        "kind": "fact",
+        "permitted": true,
+        "text": "Your report lists 112 mL/min/1.73 m2 for EST. GLOMERULAR FILTRATION RATE (eGFR).",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "comparison_with_reference",
+        "kind": "comparison",
+        "permitted": false,
+        "text": null,
+        "reason": "reference is stratified; it is not a single numeric interval",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "what_this_may_generally_indicate",
+        "kind": "education",
+        "permitted": true,
+        "text": "The value is an estimate from a formula, not a direct measurement. This is general education about the test, not a statement about your health.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cmp"
+        ],
+        "partial": true
+      },
+      {
+        "key": "important_limitations",
+        "kind": "limitation",
+        "permitted": true,
+        "text": "The reference interval printed on your report is specific to the laboratory that produced it; intervals from other laboratories are not interchangeable. A result outside the printed interval may or may not reflect a health problem, and a result inside the interval does not by itself guarantee health. The approved source describes creatinine as a waste product filtered by the kidneys but does not describe how eGFR is calculated or interpreted; MediRead therefore does not compare it with the printed ranges in detail. MediRead does not have your symptoms, medical history, medicines or other test results, and cannot assess how urgent any result is.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "sources",
+        "kind": "reference",
+        "permitted": true,
+        "text": "Comprehensive Metabolic Panel (CMP) \u2014 MedlinePlus, U.S. National Library of Medicine. https://medlineplus.gov/lab-tests/comprehensive-metabolic-panel-cmp/ (accessed 2026-11-07). Source: MedlinePlus, National Library of Medicine.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cmp"
+        ],
+        "partial": false
+      }
+    ],
+    "warnings": [
+      "comparison with the reference range withheld",
+      "knowledge entry is partial"
+    ],
+    "facts": {
+      "value_text": "112",
+      "unit_text": "mL/min/1.73 m2",
+      "reference_text": ">= 90 : Normal | 60 - 89 : Mild Decrease | 45 - 59 : Mild to Moderate Decrease | 30 - 44 : Moderate to Severe Decrease | 15 - 29 : Severe Decrease",
+      "value_kind": "numeric",
+      "comparison_state": "blocked_by_gate"
+    }
+  },
+  "R11_ocr_blocked": {
+    "result_id": "0fec2b6961e6",
+    "report_id": "ocr-example",
+    "page": 1,
+    "section": "Liver function",
+    "test_name": "ALKALINE PHOSPHATASE",
+    "test_id": "alkaline_phosphatase",
+    "canonical_name": "Alkaline phosphatase (ALP)",
+    "knowledge_status": "complete",
+    "knowledge_coverage": "complete",
+    "knowledge_review_status": "approved",
+    "status": "withheld",
+    "permitted": {
+      "what_this_test_measures": false,
+      "your_reported_result": true,
+      "comparison_with_reference": false,
+      "what_this_may_generally_indicate": false,
+      "important_limitations": true,
+      "sources": false
+    },
+    "gates": {
+      "identify_test": false,
+      "interpret_value": false,
+      "unit_comparison": false,
+      "range_comparison": false
+    },
+    "blocked_reasons": [
+      "what_this_test_measures: the test name has not been confirmed; explaining what the test measures could describe the wrong test",
+      "comparison_with_reference: test is OCR-derived and must be confirmed; value is OCR-derived and must be confirmed; reference is OCR-derived and must be confirmed; unit is OCR-derived and must be confirmed",
+      "what_this_may_generally_indicate: the test or its value has not been confirmed",
+      "sources: the test name has not been confirmed, so no source is attributed"
+    ],
+    "comparison": {
+      "state": "blocked_by_gate",
+      "value_text": "65.63",
+      "unit_text": "U/L",
+      "reference_text": "45-129",
+      "low": 45.0,
+      "high": 129.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "operator": null,
+      "stratified": false,
+      "description": null
+    },
+    "allowed_numbers": [
+      "129",
+      "45",
+      "65.63"
+    ],
+    "sections": [
+      {
+        "key": "what_this_test_measures",
+        "kind": "education",
+        "permitted": false,
+        "text": null,
+        "reason": "the test name has not been confirmed; explaining what the test measures could describe the wrong test",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "your_reported_result",
+        "kind": "fact",
+        "permitted": true,
+        "text": "Your report lists 65.63 U/L for ALKALINE PHOSPHATASE. This value has not been confirmed and should be checked against the original report before relying on it. This text was read from the report image by OCR, not from a text layer, and needs confirmation.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "comparison_with_reference",
+        "kind": "comparison",
+        "permitted": false,
+        "text": null,
+        "reason": "test is OCR-derived and must be confirmed; value is OCR-derived and must be confirmed; reference is OCR-derived and must be confirmed; unit is OCR-derived and must be confirmed",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "what_this_may_generally_indicate",
+        "kind": "education",
+        "permitted": false,
+        "text": null,
+        "reason": "the test or its value has not been confirmed",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "important_limitations",
+        "kind": "limitation",
+        "permitted": true,
+        "text": "The reference interval printed on your report is specific to the laboratory that produced it; intervals from other laboratories are not interchangeable. A result outside the printed interval may or may not reflect a health problem, and a result inside the interval does not by itself guarantee health. The unit for this result could not be confirmed. The value was read by OCR and has not been confirmed; it should be checked against the original report. MediRead has not interpreted this value; it is shown as it appears on the report and marked unconfirmed. The test name has not been confirmed, so MediRead does not explain what the test measures. MediRead does not have your symptoms, medical history, medicines or other test results, and cannot assess how urgent any result is.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "sources",
+        "kind": "reference",
+        "permitted": false,
+        "text": null,
+        "reason": "the test name has not been confirmed, so no source is attributed",
+        "sources": [],
+        "partial": false
+      }
+    ],
+    "warnings": [
+      "test name not confirmed",
+      "value not confirmed",
+      "comparison with the reference range withheld"
+    ],
+    "facts": {
+      "value_text": "65.63",
+      "unit_text": "U/L",
+      "reference_text": "45-129",
+      "value_kind": "numeric",
+      "comparison_state": "blocked_by_gate"
+    }
+  },
+  "R07_review_required": {
+    "result_id": "ded22b4bfdcf",
+    "report_id": "4f16a4444054fdfe",
+    "page": 3,
+    "section": "Urine analysis",
+    "test_name": "SPECIFIC GRAVITY",
+    "test_id": null,
+    "canonical_name": null,
+    "knowledge_status": "unsupported",
+    "knowledge_coverage": "unsupported",
+    "status": "withheld",
+    "permitted": {
+      "what_this_test_measures": false,
+      "your_reported_result": true,
+      "comparison_with_reference": false,
+      "what_this_may_generally_indicate": false,
+      "important_limitations": true,
+      "sources": false
+    },
+    "gates": {
+      "identify_test": true,
+      "interpret_value": false,
+      "unit_comparison": false,
+      "range_comparison": false
+    },
+    "blocked_reasons": [
+      "what_this_test_measures: no approved knowledge entry is available for this test, so MediRead does not describe it",
+      "comparison_with_reference: value is requires_review",
+      "what_this_may_generally_indicate: the test or its value has not been confirmed",
+      "sources: no sources to cite for an unsupported test"
+    ],
+    "comparison": {
+      "state": "blocked_by_gate",
+      "value_text": "< 1.003",
+      "unit_text": "-",
+      "reference_text": "1.003-1.030",
+      "low": 1.003,
+      "high": 1.03,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "operator": null,
+      "stratified": false,
+      "description": null
+    },
+    "allowed_numbers": [
+      "1.003",
+      "1.030"
+    ],
+    "sections": [
+      {
+        "key": "what_this_test_measures",
+        "kind": "education",
+        "permitted": false,
+        "text": null,
+        "reason": "no approved knowledge entry is available for this test, so MediRead does not describe it",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "your_reported_result",
+        "kind": "fact",
+        "permitted": true,
+        "text": "Your report lists < 1.003 for SPECIFIC GRAVITY, with no unit printed. This value has not been confirmed and should be checked against the original report before relying on it.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "comparison_with_reference",
+        "kind": "comparison",
+        "permitted": false,
+        "text": null,
+        "reason": "value is requires_review",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "what_this_may_generally_indicate",
+        "kind": "education",
+        "permitted": false,
+        "text": null,
+        "reason": "the test or its value has not been confirmed",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "important_limitations",
+        "kind": "limitation",
+        "permitted": true,
+        "text": "MediRead does not have an approved description for this test, so it cannot explain what the result means. The unit for this result could not be confirmed. MediRead has not interpreted this value; it is shown as it appears on the report and marked unconfirmed. MediRead does not have your symptoms, medical history, medicines or other test results, and cannot assess how urgent any result is.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "sources",
+        "kind": "reference",
+        "permitted": false,
+        "text": null,
+        "reason": "no sources to cite for an unsupported test",
+        "sources": [],
+        "partial": false
+      }
+    ],
+    "warnings": [
+      "value not confirmed",
+      "comparison with the reference range withheld",
+      "test not in knowledge base"
+    ],
+    "facts": {
+      "value_text": "< 1.003",
+      "unit_text": "-",
+      "reference_text": "1.003-1.030",
+      "value_kind": "numeric",
+      "comparison_state": "blocked_by_gate"
+    }
+  },
+  "R08_unknown_test": {
+    "result_id": "4e7200a40d2b",
+    "report_id": "c66749371af7e28c",
+    "page": 3,
+    "section": "Other",
+    "test_name": "CA-125",
+    "test_id": null,
+    "canonical_name": null,
+    "knowledge_status": "unsupported",
+    "knowledge_coverage": "unsupported",
+    "status": "partially_explained",
+    "permitted": {
+      "what_this_test_measures": false,
+      "your_reported_result": true,
+      "comparison_with_reference": true,
+      "what_this_may_generally_indicate": false,
+      "important_limitations": true,
+      "sources": false
+    },
+    "gates": {
+      "identify_test": true,
+      "interpret_value": true,
+      "unit_comparison": true,
+      "range_comparison": true
+    },
+    "blocked_reasons": [
+      "what_this_test_measures: no approved knowledge entry is available for this test, so MediRead does not describe it",
+      "what_this_may_generally_indicate: no approved knowledge entry is available for this test",
+      "sources: no sources to cite for an unsupported test"
+    ],
+    "comparison": {
+      "state": "satisfies_one_sided_reference",
+      "value_text": "29.7",
+      "unit_text": "U/mL",
+      "reference_text": "Less than 30.2 U/ml",
+      "low": null,
+      "high": 30.2,
+      "low_inclusive": true,
+      "high_inclusive": false,
+      "operator": "<",
+      "stratified": false,
+      "description": "The printed reference is \"Less than 30.2 U/ml\". The reported value satisfies that bound."
+    },
+    "allowed_numbers": [
+      "125",
+      "29.7",
+      "30.2"
+    ],
+    "sections": [
+      {
+        "key": "what_this_test_measures",
+        "kind": "education",
+        "permitted": false,
+        "text": null,
+        "reason": "no approved knowledge entry is available for this test, so MediRead does not describe it",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "your_reported_result",
+        "kind": "fact",
+        "permitted": true,
+        "text": "Your report lists 29.7 U/mL for CA-125.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "comparison_with_reference",
+        "kind": "comparison",
+        "permitted": true,
+        "text": "The printed reference is \"Less than 30.2 U/ml\". The reported value satisfies that bound.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "what_this_may_generally_indicate",
+        "kind": "education",
+        "permitted": false,
+        "text": null,
+        "reason": "no approved knowledge entry is available for this test",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "important_limitations",
+        "kind": "limitation",
+        "permitted": true,
+        "text": "MediRead does not have an approved description for this test, so it cannot explain what the result means. MediRead does not have your symptoms, medical history, medicines or other test results, and cannot assess how urgent any result is.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "sources",
+        "kind": "reference",
+        "permitted": false,
+        "text": null,
+        "reason": "no sources to cite for an unsupported test",
+        "sources": [],
+        "partial": false
+      }
+    ],
+    "warnings": [
+      "test not in knowledge base"
+    ],
+    "facts": {
+      "value_text": "29.7",
+      "unit_text": "U/mL",
+      "reference_text": "Less than 30.2 U/ml",
+      "value_kind": "numeric",
+      "comparison_state": "satisfies_one_sided_reference"
+    }
+  },
+  "R09_qualitative": {
+    "result_id": "0335ae49e947",
+    "report_id": "0bd1dd6697b0d070",
+    "page": 10,
+    "section": "Urine analysis",
+    "test_name": "COLOUR",
+    "test_id": null,
+    "canonical_name": "Urine colour",
+    "knowledge_status": "complete",
+    "knowledge_coverage": "complete",
+    "knowledge_review_status": "approved",
+    "status": "explained",
+    "permitted": {
+      "what_this_test_measures": true,
+      "your_reported_result": true,
+      "comparison_with_reference": true,
+      "what_this_may_generally_indicate": true,
+      "important_limitations": true,
+      "sources": true
+    },
+    "gates": {
+      "identify_test": true,
+      "interpret_value": true,
+      "unit_comparison": false,
+      "range_comparison": true
+    },
+    "blocked_reasons": [],
+    "comparison": {
+      "state": "differs_from_qualitative_reference",
+      "value_text": "Straw",
+      "unit_text": "-",
+      "reference_text": "Pale Yellow",
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "operator": null,
+      "stratified": false,
+      "description": "The reported result differs from the reference wording printed on your report (\"Pale Yellow\")."
+    },
+    "allowed_numbers": [],
+    "sections": [
+      {
+        "key": "what_this_test_measures",
+        "kind": "education",
+        "permitted": true,
+        "text": "Urine colour. A urinalysis checks the colour of your urine. It is part of a routine urinalysis.",
+        "reason": null,
+        "sources": [
+          "mp_topic_urinalysis"
+        ],
+        "partial": false
+      },
+      {
+        "key": "your_reported_result",
+        "kind": "fact",
+        "permitted": true,
+        "text": "Your report lists \"Straw\" for COLOUR.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "comparison_with_reference",
+        "kind": "comparison",
+        "permitted": true,
+        "text": "The reported result differs from the reference wording printed on your report (\"Pale Yellow\").",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "what_this_may_generally_indicate",
+        "kind": "education",
+        "permitted": true,
+        "text": "The result is a description rather than a number. Colour is descriptive and is interpreted together with appearance, concentration and other urine tests. This is general education about the test, not a statement about your health.",
+        "reason": null,
+        "sources": [
+          "mp_topic_urinalysis"
+        ],
+        "partial": false
+      },
+      {
+        "key": "important_limitations",
+        "kind": "limitation",
+        "permitted": true,
+        "text": "The reference interval printed on your report is specific to the laboratory that produced it; intervals from other laboratories are not interchangeable. A result outside the printed interval may or may not reflect a health problem, and a result inside the interval does not by itself guarantee health. The unit for this result could not be confirmed. MediRead does not have your symptoms, medical history, medicines or other test results, and cannot assess how urgent any result is.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "sources",
+        "kind": "reference",
+        "permitted": true,
+        "text": "Urinalysis \u2014 MedlinePlus, U.S. National Library of Medicine. https://medlineplus.gov/urinalysis.html (accessed 2026-11-07). Source: MedlinePlus, National Library of Medicine.",
+        "reason": null,
+        "sources": [
+          "mp_topic_urinalysis"
+        ],
+        "partial": false
+      }
+    ],
+    "warnings": [],
+    "facts": {
+      "value_text": "Straw",
+      "unit_text": "-",
+      "reference_text": "Pale Yellow",
+      "value_kind": "qualitative",
+      "comparison_state": "differs_from_qualitative_reference"
+    }
+  },
+  "R10_entirely_withheld": {
+    "result_id": "ded22b4bfdcf",
+    "report_id": "4f16a4444054fdfe",
+    "page": 3,
+    "section": "Urine analysis",
+    "test_name": "SPECIFIC GRAVITY",
+    "test_id": null,
+    "canonical_name": null,
+    "knowledge_status": "unsupported",
+    "knowledge_coverage": "unsupported",
+    "status": "withheld",
+    "permitted": {
+      "what_this_test_measures": false,
+      "your_reported_result": true,
+      "comparison_with_reference": false,
+      "what_this_may_generally_indicate": false,
+      "important_limitations": true,
+      "sources": false
+    },
+    "gates": {
+      "identify_test": true,
+      "interpret_value": false,
+      "unit_comparison": false,
+      "range_comparison": false
+    },
+    "blocked_reasons": [
+      "what_this_test_measures: no approved knowledge entry is available for this test, so MediRead does not describe it",
+      "comparison_with_reference: value is requires_review",
+      "what_this_may_generally_indicate: the test or its value has not been confirmed",
+      "sources: no sources to cite for an unsupported test"
+    ],
+    "comparison": {
+      "state": "blocked_by_gate",
+      "value_text": "< 1.003",
+      "unit_text": "-",
+      "reference_text": "1.003-1.030",
+      "low": 1.003,
+      "high": 1.03,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "operator": null,
+      "stratified": false,
+      "description": null
+    },
+    "allowed_numbers": [
+      "1.003",
+      "1.030"
+    ],
+    "sections": [
+      {
+        "key": "what_this_test_measures",
+        "kind": "education",
+        "permitted": false,
+        "text": null,
+        "reason": "no approved knowledge entry is available for this test, so MediRead does not describe it",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "your_reported_result",
+        "kind": "fact",
+        "permitted": true,
+        "text": "Your report lists < 1.003 for SPECIFIC GRAVITY, with no unit printed. This value has not been confirmed and should be checked against the original report before relying on it.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "comparison_with_reference",
+        "kind": "comparison",
+        "permitted": false,
+        "text": null,
+        "reason": "value is requires_review",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "what_this_may_generally_indicate",
+        "kind": "education",
+        "permitted": false,
+        "text": null,
+        "reason": "the test or its value has not been confirmed",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "important_limitations",
+        "kind": "limitation",
+        "permitted": true,
+        "text": "MediRead does not have an approved description for this test, so it cannot explain what the result means. The unit for this result could not be confirmed. MediRead has not interpreted this value; it is shown as it appears on the report and marked unconfirmed. MediRead does not have your symptoms, medical history, medicines or other test results, and cannot assess how urgent any result is.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "sources",
+        "kind": "reference",
+        "permitted": false,
+        "text": null,
+        "reason": "no sources to cite for an unsupported test",
+        "sources": [],
+        "partial": false
+      }
+    ],
+    "warnings": [
+      "value not confirmed",
+      "comparison with the reference range withheld",
+      "test not in knowledge base"
+    ],
+    "facts": {
+      "value_text": "< 1.003",
+      "unit_text": "-",
+      "reference_text": "1.003-1.030",
+      "value_kind": "numeric",
+      "comparison_state": "blocked_by_gate"
+    }
+  },
+  "F01_anemia_question": {
+    "result_id": "5f7598c1bcd8",
+    "report_id": "0bd1dd6697b0d070",
+    "page": 2,
+    "section": "CBC / Hemogram",
+    "test_name": "HEMOGLOBIN",
+    "test_id": "hemoglobin",
+    "canonical_name": "Haemoglobin",
+    "knowledge_status": "complete",
+    "knowledge_coverage": "complete",
+    "knowledge_review_status": "approved",
+    "status": "explained",
+    "permitted": {
+      "what_this_test_measures": true,
+      "your_reported_result": true,
+      "comparison_with_reference": true,
+      "what_this_may_generally_indicate": true,
+      "important_limitations": true,
+      "sources": true
+    },
+    "gates": {
+      "identify_test": true,
+      "interpret_value": true,
+      "unit_comparison": true,
+      "range_comparison": true
+    },
+    "blocked_reasons": [],
+    "comparison": {
+      "state": "below_range",
+      "value_text": "9",
+      "unit_text": "g/dL",
+      "reference_text": "12.0-15.0",
+      "low": 12.0,
+      "high": 15.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "operator": null,
+      "stratified": false,
+      "description": "The reported value is below the reference interval printed on your report (12.0-15.0 g/dL)."
+    },
+    "allowed_numbers": [
+      "12.0",
+      "15.0",
+      "9"
+    ],
+    "sections": [
+      {
+        "key": "what_this_test_measures",
+        "kind": "education",
+        "permitted": true,
+        "text": "Haemoglobin. Haemoglobin is the iron-rich protein inside red blood cells that carries oxygen from the lungs to the rest of the body. It is part of a complete blood count and is used to look for anaemia and to monitor conditions that affect red blood cells.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cbc"
+        ],
+        "partial": false
+      },
+      {
+        "key": "your_reported_result",
+        "kind": "fact",
+        "permitted": true,
+        "text": "Your report lists 9 g/dL for HEMOGLOBIN.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "comparison_with_reference",
+        "kind": "comparison",
+        "permitted": true,
+        "text": "The reported value is below the reference interval printed on your report (12.0-15.0 g/dL).",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "what_this_may_generally_indicate",
+        "kind": "education",
+        "permitted": true,
+        "text": "The result is the amount of haemoglobin in a measured volume of blood, usually reported in grams per decilitre (g/dL). A haemoglobin result below the printed interval is commonly described as low. MedlinePlus notes that abnormal red-cell, haemoglobin or haematocrit levels may be a sign of dehydration, anaemia, heart disease or too little iron, and that other factors can affect results. This is general education about the test, not a statement about your health.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cbc"
+        ],
+        "partial": false
+      },
+      {
+        "key": "important_limitations",
+        "kind": "limitation",
+        "permitted": true,
+        "text": "The reference interval printed on your report is specific to the laboratory that produced it; intervals from other laboratories are not interchangeable. A result outside the printed interval may or may not reflect a health problem, and a result inside the interval does not by itself guarantee health. Haemoglobin can be affected by hydration and by factors such as diet, activity, medicines and menstruation (MedlinePlus). MediRead does not have your symptoms, medical history, medicines or other test results, and cannot assess how urgent any result is.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "sources",
+        "kind": "reference",
+        "permitted": true,
+        "text": "Complete Blood Count (CBC) \u2014 MedlinePlus, U.S. National Library of Medicine. https://medlineplus.gov/lab-tests/complete-blood-count-cbc/ (accessed 2026-11-07). Source: MedlinePlus, National Library of Medicine.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cbc"
+        ],
+        "partial": false
+      }
+    ],
+    "warnings": [],
+    "facts": {
+      "value_text": "9",
+      "unit_text": "g/dL",
+      "reference_text": "12.0-15.0",
+      "value_kind": "numeric",
+      "comparison_state": "below_range"
+    }
+  },
+  "F02_normal_question": {
+    "result_id": "fd4739a4c2c0",
+    "report_id": "0bd1dd6697b0d070",
+    "page": 2,
+    "section": "CBC / Hemogram",
+    "test_name": "TOTAL LEUCOCYTES COUNT",
+    "test_id": "total_leucocyte_count",
+    "canonical_name": "Total white blood cell count",
+    "knowledge_status": "complete",
+    "knowledge_coverage": "complete",
+    "knowledge_review_status": "approved",
+    "status": "explained",
+    "permitted": {
+      "what_this_test_measures": true,
+      "your_reported_result": true,
+      "comparison_with_reference": true,
+      "what_this_may_generally_indicate": true,
+      "important_limitations": true,
+      "sources": true
+    },
+    "gates": {
+      "identify_test": true,
+      "interpret_value": true,
+      "unit_comparison": true,
+      "range_comparison": true
+    },
+    "blocked_reasons": [],
+    "comparison": {
+      "state": "within_range",
+      "value_text": "6.69",
+      "unit_text": "X 10\u00b3 / \u00b5L",
+      "reference_text": "4.0-10.0",
+      "low": 4.0,
+      "high": 10.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "operator": null,
+      "stratified": false,
+      "description": "The reported value is inside the reference interval printed on your report (4.0-10.0 X 10\u00b3 / \u00b5L)."
+    },
+    "allowed_numbers": [
+      "10",
+      "10.0",
+      "4.0",
+      "6.69"
+    ],
+    "sections": [
+      {
+        "key": "what_this_test_measures",
+        "kind": "education",
+        "permitted": true,
+        "text": "Total white blood cell count. White blood cells are part of the immune system and help the body fight infection and other diseases; a complete blood count measures the total number in a volume of blood. It is used in routine checks and to monitor infections, immune conditions and treatments that affect blood cells.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cbc",
+          "mp_lab_differential"
+        ],
+        "partial": false
+      },
+      {
+        "key": "your_reported_result",
+        "kind": "fact",
+        "permitted": true,
+        "text": "Your report lists 6.69 X 10\u00b3 / \u00b5L for TOTAL LEUCOCYTES COUNT.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "comparison_with_reference",
+        "kind": "comparison",
+        "permitted": true,
+        "text": "The reported value is inside the reference interval printed on your report (4.0-10.0 X 10\u00b3 / \u00b5L).",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "what_this_may_generally_indicate",
+        "kind": "education",
+        "permitted": true,
+        "text": "The result is the total number of white blood cells per volume of blood. This is general education about the test, not a statement about your health.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cbc",
+          "mp_lab_differential"
+        ],
+        "partial": false
+      },
+      {
+        "key": "important_limitations",
+        "kind": "limitation",
+        "permitted": true,
+        "text": "The reference interval printed on your report is specific to the laboratory that produced it; intervals from other laboratories are not interchangeable. A result outside the printed interval may or may not reflect a health problem, and a result inside the interval does not by itself guarantee health. MedlinePlus notes that abnormal white-cell results do not always mean a condition that needs treatment; injury, stress, smoking and alcohol can also affect the count. MediRead does not have your symptoms, medical history, medicines or other test results, and cannot assess how urgent any result is.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "sources",
+        "kind": "reference",
+        "permitted": true,
+        "text": "Complete Blood Count (CBC) \u2014 MedlinePlus, U.S. National Library of Medicine. https://medlineplus.gov/lab-tests/complete-blood-count-cbc/ (accessed 2026-11-07). Blood Differential \u2014 MedlinePlus, U.S. National Library of Medicine. https://medlineplus.gov/lab-tests/blood-differential/ (accessed 2026-11-07). Source: MedlinePlus, National Library of Medicine.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cbc",
+          "mp_lab_differential"
+        ],
+        "partial": false
+      }
+    ],
+    "warnings": [],
+    "facts": {
+      "value_text": "6.69",
+      "unit_text": "X 10\u00b3 / \u00b5L",
+      "reference_text": "4.0-10.0",
+      "value_kind": "numeric",
+      "comparison_state": "within_range"
+    }
+  },
+  "F03_unsupported_test_question": {
+    "result_id": "4e7200a40d2b",
+    "report_id": "c66749371af7e28c",
+    "page": 3,
+    "section": "Other",
+    "test_name": "CA-125",
+    "test_id": null,
+    "canonical_name": null,
+    "knowledge_status": "unsupported",
+    "knowledge_coverage": "unsupported",
+    "status": "partially_explained",
+    "permitted": {
+      "what_this_test_measures": false,
+      "your_reported_result": true,
+      "comparison_with_reference": true,
+      "what_this_may_generally_indicate": false,
+      "important_limitations": true,
+      "sources": false
+    },
+    "gates": {
+      "identify_test": true,
+      "interpret_value": true,
+      "unit_comparison": true,
+      "range_comparison": true
+    },
+    "blocked_reasons": [
+      "what_this_test_measures: no approved knowledge entry is available for this test, so MediRead does not describe it",
+      "what_this_may_generally_indicate: no approved knowledge entry is available for this test",
+      "sources: no sources to cite for an unsupported test"
+    ],
+    "comparison": {
+      "state": "satisfies_one_sided_reference",
+      "value_text": "29.7",
+      "unit_text": "U/mL",
+      "reference_text": "Less than 30.2 U/ml",
+      "low": null,
+      "high": 30.2,
+      "low_inclusive": true,
+      "high_inclusive": false,
+      "operator": "<",
+      "stratified": false,
+      "description": "The printed reference is \"Less than 30.2 U/ml\". The reported value satisfies that bound."
+    },
+    "allowed_numbers": [
+      "125",
+      "29.7",
+      "30.2"
+    ],
+    "sections": [
+      {
+        "key": "what_this_test_measures",
+        "kind": "education",
+        "permitted": false,
+        "text": null,
+        "reason": "no approved knowledge entry is available for this test, so MediRead does not describe it",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "your_reported_result",
+        "kind": "fact",
+        "permitted": true,
+        "text": "Your report lists 29.7 U/mL for CA-125.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "comparison_with_reference",
+        "kind": "comparison",
+        "permitted": true,
+        "text": "The printed reference is \"Less than 30.2 U/ml\". The reported value satisfies that bound.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "what_this_may_generally_indicate",
+        "kind": "education",
+        "permitted": false,
+        "text": null,
+        "reason": "no approved knowledge entry is available for this test",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "important_limitations",
+        "kind": "limitation",
+        "permitted": true,
+        "text": "MediRead does not have an approved description for this test, so it cannot explain what the result means. MediRead does not have your symptoms, medical history, medicines or other test results, and cannot assess how urgent any result is.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "sources",
+        "kind": "reference",
+        "permitted": false,
+        "text": null,
+        "reason": "no sources to cite for an unsupported test",
+        "sources": [],
+        "partial": false
+      }
+    ],
+    "warnings": [
+      "test not in knowledge base"
+    ],
+    "facts": {
+      "value_text": "29.7",
+      "unit_text": "U/mL",
+      "reference_text": "Less than 30.2 U/ml",
+      "value_kind": "numeric",
+      "comparison_state": "satisfies_one_sided_reference"
+    }
+  },
+  "F04_blocked_value_question": {
+    "result_id": "ded22b4bfdcf",
+    "report_id": "4f16a4444054fdfe",
+    "page": 3,
+    "section": "Urine analysis",
+    "test_name": "SPECIFIC GRAVITY",
+    "test_id": null,
+    "canonical_name": null,
+    "knowledge_status": "unsupported",
+    "knowledge_coverage": "unsupported",
+    "status": "withheld",
+    "permitted": {
+      "what_this_test_measures": false,
+      "your_reported_result": true,
+      "comparison_with_reference": false,
+      "what_this_may_generally_indicate": false,
+      "important_limitations": true,
+      "sources": false
+    },
+    "gates": {
+      "identify_test": true,
+      "interpret_value": false,
+      "unit_comparison": false,
+      "range_comparison": false
+    },
+    "blocked_reasons": [
+      "what_this_test_measures: no approved knowledge entry is available for this test, so MediRead does not describe it",
+      "comparison_with_reference: value is requires_review",
+      "what_this_may_generally_indicate: the test or its value has not been confirmed",
+      "sources: no sources to cite for an unsupported test"
+    ],
+    "comparison": {
+      "state": "blocked_by_gate",
+      "value_text": "< 1.003",
+      "unit_text": "-",
+      "reference_text": "1.003-1.030",
+      "low": 1.003,
+      "high": 1.03,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "operator": null,
+      "stratified": false,
+      "description": null
+    },
+    "allowed_numbers": [
+      "1.003",
+      "1.030"
+    ],
+    "sections": [
+      {
+        "key": "what_this_test_measures",
+        "kind": "education",
+        "permitted": false,
+        "text": null,
+        "reason": "no approved knowledge entry is available for this test, so MediRead does not describe it",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "your_reported_result",
+        "kind": "fact",
+        "permitted": true,
+        "text": "Your report lists < 1.003 for SPECIFIC GRAVITY, with no unit printed. This value has not been confirmed and should be checked against the original report before relying on it.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "comparison_with_reference",
+        "kind": "comparison",
+        "permitted": false,
+        "text": null,
+        "reason": "value is requires_review",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "what_this_may_generally_indicate",
+        "kind": "education",
+        "permitted": false,
+        "text": null,
+        "reason": "the test or its value has not been confirmed",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "important_limitations",
+        "kind": "limitation",
+        "permitted": true,
+        "text": "MediRead does not have an approved description for this test, so it cannot explain what the result means. The unit for this result could not be confirmed. MediRead has not interpreted this value; it is shown as it appears on the report and marked unconfirmed. MediRead does not have your symptoms, medical history, medicines or other test results, and cannot assess how urgent any result is.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "sources",
+        "kind": "reference",
+        "permitted": false,
+        "text": null,
+        "reason": "no sources to cite for an unsupported test",
+        "sources": [],
+        "partial": false
+      }
+    ],
+    "warnings": [
+      "value not confirmed",
+      "comparison with the reference range withheld",
+      "test not in knowledge base"
+    ],
+    "facts": {
+      "value_text": "< 1.003",
+      "unit_text": "-",
+      "reference_text": "1.003-1.030",
+      "value_kind": "numeric",
+      "comparison_state": "blocked_by_gate"
+    }
+  },
+  "F05_stratified_question": {
+    "result_id": "27ddaeddae8f",
+    "report_id": "4f16a4444054fdfe",
+    "page": 9,
+    "section": "Kidney function",
+    "test_name": "EST. GLOMERULAR FILTRATION RATE (eGFR)",
+    "test_id": "egfr",
+    "canonical_name": "Estimated glomerular filtration rate (eGFR)",
+    "knowledge_status": "partial",
+    "knowledge_coverage": "partial",
+    "knowledge_review_status": "unsupported",
+    "status": "partially_explained",
+    "permitted": {
+      "what_this_test_measures": true,
+      "your_reported_result": true,
+      "comparison_with_reference": false,
+      "what_this_may_generally_indicate": true,
+      "important_limitations": true,
+      "sources": true
+    },
+    "gates": {
+      "identify_test": true,
+      "interpret_value": true,
+      "unit_comparison": true,
+      "range_comparison": false
+    },
+    "blocked_reasons": [
+      "comparison_with_reference: reference is stratified; it is not a single numeric interval"
+    ],
+    "comparison": {
+      "state": "blocked_by_gate",
+      "value_text": "112",
+      "unit_text": "mL/min/1.73 m2",
+      "reference_text": ">= 90 : Normal | 60 - 89 : Mild Decrease | 45 - 59 : Mild to Moderate Decrease | 30 - 44 : Moderate to Severe Decrease | 15 - 29 : Severe Decrease",
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "operator": null,
+      "stratified": true,
+      "description": null
+    },
+    "allowed_numbers": [
+      "1.73",
+      "112",
+      "15",
+      "2",
+      "29",
+      "30",
+      "44",
+      "45",
+      "59",
+      "60",
+      "89",
+      "90"
+    ],
+    "sections": [
+      {
+        "key": "what_this_test_measures",
+        "kind": "education",
+        "permitted": true,
+        "text": "Estimated glomerular filtration rate (eGFR). eGFR is a calculated estimate of how well the kidneys filter, derived from a creatinine measurement. It is reported alongside creatinine to help describe kidney function. MediRead has only a general description for this test because the approved sources do not cover it in detail.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cmp"
+        ],
+        "partial": true
+      },
+      {
+        "key": "your_reported_result",
+        "kind": "fact",
+        "permitted": true,
+        "text": "Your report lists 112 mL/min/1.73 m2 for EST. GLOMERULAR FILTRATION RATE (eGFR).",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "comparison_with_reference",
+        "kind": "comparison",
+        "permitted": false,
+        "text": null,
+        "reason": "reference is stratified; it is not a single numeric interval",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "what_this_may_generally_indicate",
+        "kind": "education",
+        "permitted": true,
+        "text": "The value is an estimate from a formula, not a direct measurement. This is general education about the test, not a statement about your health.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cmp"
+        ],
+        "partial": true
+      },
+      {
+        "key": "important_limitations",
+        "kind": "limitation",
+        "permitted": true,
+        "text": "The reference interval printed on your report is specific to the laboratory that produced it; intervals from other laboratories are not interchangeable. A result outside the printed interval may or may not reflect a health problem, and a result inside the interval does not by itself guarantee health. The approved source describes creatinine as a waste product filtered by the kidneys but does not describe how eGFR is calculated or interpreted; MediRead therefore does not compare it with the printed ranges in detail. MediRead does not have your symptoms, medical history, medicines or other test results, and cannot assess how urgent any result is.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "sources",
+        "kind": "reference",
+        "permitted": true,
+        "text": "Comprehensive Metabolic Panel (CMP) \u2014 MedlinePlus, U.S. National Library of Medicine. https://medlineplus.gov/lab-tests/comprehensive-metabolic-panel-cmp/ (accessed 2026-11-07). Source: MedlinePlus, National Library of Medicine.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cmp"
+        ],
+        "partial": false
+      }
+    ],
+    "warnings": [
+      "comparison with the reference range withheld",
+      "knowledge entry is partial"
+    ],
+    "facts": {
+      "value_text": "112",
+      "unit_text": "mL/min/1.73 m2",
+      "reference_text": ">= 90 : Normal | 60 - 89 : Mild Decrease | 45 - 59 : Mild to Moderate Decrease | 30 - 44 : Moderate to Severe Decrease | 15 - 29 : Severe Decrease",
+      "value_kind": "numeric",
+      "comparison_state": "blocked_by_gate"
+    }
+  },
+  "F06_treatment_question": {
+    "result_id": "5f7598c1bcd8",
+    "report_id": "0bd1dd6697b0d070",
+    "page": 2,
+    "section": "CBC / Hemogram",
+    "test_name": "HEMOGLOBIN",
+    "test_id": "hemoglobin",
+    "canonical_name": "Haemoglobin",
+    "knowledge_status": "complete",
+    "knowledge_coverage": "complete",
+    "knowledge_review_status": "approved",
+    "status": "explained",
+    "permitted": {
+      "what_this_test_measures": true,
+      "your_reported_result": true,
+      "comparison_with_reference": true,
+      "what_this_may_generally_indicate": true,
+      "important_limitations": true,
+      "sources": true
+    },
+    "gates": {
+      "identify_test": true,
+      "interpret_value": true,
+      "unit_comparison": true,
+      "range_comparison": true
+    },
+    "blocked_reasons": [],
+    "comparison": {
+      "state": "below_range",
+      "value_text": "9",
+      "unit_text": "g/dL",
+      "reference_text": "12.0-15.0",
+      "low": 12.0,
+      "high": 15.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "operator": null,
+      "stratified": false,
+      "description": "The reported value is below the reference interval printed on your report (12.0-15.0 g/dL)."
+    },
+    "allowed_numbers": [
+      "12.0",
+      "15.0",
+      "9"
+    ],
+    "sections": [
+      {
+        "key": "what_this_test_measures",
+        "kind": "education",
+        "permitted": true,
+        "text": "Haemoglobin. Haemoglobin is the iron-rich protein inside red blood cells that carries oxygen from the lungs to the rest of the body. It is part of a complete blood count and is used to look for anaemia and to monitor conditions that affect red blood cells.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cbc"
+        ],
+        "partial": false
+      },
+      {
+        "key": "your_reported_result",
+        "kind": "fact",
+        "permitted": true,
+        "text": "Your report lists 9 g/dL for HEMOGLOBIN.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "comparison_with_reference",
+        "kind": "comparison",
+        "permitted": true,
+        "text": "The reported value is below the reference interval printed on your report (12.0-15.0 g/dL).",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "what_this_may_generally_indicate",
+        "kind": "education",
+        "permitted": true,
+        "text": "The result is the amount of haemoglobin in a measured volume of blood, usually reported in grams per decilitre (g/dL). A haemoglobin result below the printed interval is commonly described as low. MedlinePlus notes that abnormal red-cell, haemoglobin or haematocrit levels may be a sign of dehydration, anaemia, heart disease or too little iron, and that other factors can affect results. This is general education about the test, not a statement about your health.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cbc"
+        ],
+        "partial": false
+      },
+      {
+        "key": "important_limitations",
+        "kind": "limitation",
+        "permitted": true,
+        "text": "The reference interval printed on your report is specific to the laboratory that produced it; intervals from other laboratories are not interchangeable. A result outside the printed interval may or may not reflect a health problem, and a result inside the interval does not by itself guarantee health. Haemoglobin can be affected by hydration and by factors such as diet, activity, medicines and menstruation (MedlinePlus). MediRead does not have your symptoms, medical history, medicines or other test results, and cannot assess how urgent any result is.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "sources",
+        "kind": "reference",
+        "permitted": true,
+        "text": "Complete Blood Count (CBC) \u2014 MedlinePlus, U.S. National Library of Medicine. https://medlineplus.gov/lab-tests/complete-blood-count-cbc/ (accessed 2026-11-07). Source: MedlinePlus, National Library of Medicine.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cbc"
+        ],
+        "partial": false
+      }
+    ],
+    "warnings": [],
+    "facts": {
+      "value_text": "9",
+      "unit_text": "g/dL",
+      "reference_text": "12.0-15.0",
+      "value_kind": "numeric",
+      "comparison_state": "below_range"
+    }
+  },
+  "F07_prompt_injection": {
+    "result_id": "fd4739a4c2c0",
+    "report_id": "0bd1dd6697b0d070",
+    "page": 2,
+    "section": "CBC / Hemogram",
+    "test_name": "TOTAL LEUCOCYTES COUNT",
+    "test_id": "total_leucocyte_count",
+    "canonical_name": "Total white blood cell count",
+    "knowledge_status": "complete",
+    "knowledge_coverage": "complete",
+    "knowledge_review_status": "approved",
+    "status": "explained",
+    "permitted": {
+      "what_this_test_measures": true,
+      "your_reported_result": true,
+      "comparison_with_reference": true,
+      "what_this_may_generally_indicate": true,
+      "important_limitations": true,
+      "sources": true
+    },
+    "gates": {
+      "identify_test": true,
+      "interpret_value": true,
+      "unit_comparison": true,
+      "range_comparison": true
+    },
+    "blocked_reasons": [],
+    "comparison": {
+      "state": "within_range",
+      "value_text": "6.69",
+      "unit_text": "X 10\u00b3 / \u00b5L",
+      "reference_text": "4.0-10.0",
+      "low": 4.0,
+      "high": 10.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "operator": null,
+      "stratified": false,
+      "description": "The reported value is inside the reference interval printed on your report (4.0-10.0 X 10\u00b3 / \u00b5L)."
+    },
+    "allowed_numbers": [
+      "10",
+      "10.0",
+      "4.0",
+      "6.69"
+    ],
+    "sections": [
+      {
+        "key": "what_this_test_measures",
+        "kind": "education",
+        "permitted": true,
+        "text": "Total white blood cell count. White blood cells are part of the immune system and help the body fight infection and other diseases; a complete blood count measures the total number in a volume of blood. It is used in routine checks and to monitor infections, immune conditions and treatments that affect blood cells.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cbc",
+          "mp_lab_differential"
+        ],
+        "partial": false
+      },
+      {
+        "key": "your_reported_result",
+        "kind": "fact",
+        "permitted": true,
+        "text": "Your report lists 6.69 X 10\u00b3 / \u00b5L for TOTAL LEUCOCYTES COUNT.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "comparison_with_reference",
+        "kind": "comparison",
+        "permitted": true,
+        "text": "The reported value is inside the reference interval printed on your report (4.0-10.0 X 10\u00b3 / \u00b5L).",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "what_this_may_generally_indicate",
+        "kind": "education",
+        "permitted": true,
+        "text": "The result is the total number of white blood cells per volume of blood. This is general education about the test, not a statement about your health.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cbc",
+          "mp_lab_differential"
+        ],
+        "partial": false
+      },
+      {
+        "key": "important_limitations",
+        "kind": "limitation",
+        "permitted": true,
+        "text": "The reference interval printed on your report is specific to the laboratory that produced it; intervals from other laboratories are not interchangeable. A result outside the printed interval may or may not reflect a health problem, and a result inside the interval does not by itself guarantee health. MedlinePlus notes that abnormal white-cell results do not always mean a condition that needs treatment; injury, stress, smoking and alcohol can also affect the count. MediRead does not have your symptoms, medical history, medicines or other test results, and cannot assess how urgent any result is.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "sources",
+        "kind": "reference",
+        "permitted": true,
+        "text": "Complete Blood Count (CBC) \u2014 MedlinePlus, U.S. National Library of Medicine. https://medlineplus.gov/lab-tests/complete-blood-count-cbc/ (accessed 2026-11-07). Blood Differential \u2014 MedlinePlus, U.S. National Library of Medicine. https://medlineplus.gov/lab-tests/blood-differential/ (accessed 2026-11-07). Source: MedlinePlus, National Library of Medicine.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cbc",
+          "mp_lab_differential"
+        ],
+        "partial": false
+      }
+    ],
+    "warnings": [],
+    "facts": {
+      "value_text": "6.69",
+      "unit_text": "X 10\u00b3 / \u00b5L",
+      "reference_text": "4.0-10.0",
+      "value_kind": "numeric",
+      "comparison_state": "within_range"
+    }
+  },
+  "F08_role_override": {
+    "result_id": "4e7200a40d2b",
+    "report_id": "c66749371af7e28c",
+    "page": 3,
+    "section": "Other",
+    "test_name": "CA-125",
+    "test_id": null,
+    "canonical_name": null,
+    "knowledge_status": "unsupported",
+    "knowledge_coverage": "unsupported",
+    "status": "partially_explained",
+    "permitted": {
+      "what_this_test_measures": false,
+      "your_reported_result": true,
+      "comparison_with_reference": true,
+      "what_this_may_generally_indicate": false,
+      "important_limitations": true,
+      "sources": false
+    },
+    "gates": {
+      "identify_test": true,
+      "interpret_value": true,
+      "unit_comparison": true,
+      "range_comparison": true
+    },
+    "blocked_reasons": [
+      "what_this_test_measures: no approved knowledge entry is available for this test, so MediRead does not describe it",
+      "what_this_may_generally_indicate: no approved knowledge entry is available for this test",
+      "sources: no sources to cite for an unsupported test"
+    ],
+    "comparison": {
+      "state": "satisfies_one_sided_reference",
+      "value_text": "29.7",
+      "unit_text": "U/mL",
+      "reference_text": "Less than 30.2 U/ml",
+      "low": null,
+      "high": 30.2,
+      "low_inclusive": true,
+      "high_inclusive": false,
+      "operator": "<",
+      "stratified": false,
+      "description": "The printed reference is \"Less than 30.2 U/ml\". The reported value satisfies that bound."
+    },
+    "allowed_numbers": [
+      "125",
+      "29.7",
+      "30.2"
+    ],
+    "sections": [
+      {
+        "key": "what_this_test_measures",
+        "kind": "education",
+        "permitted": false,
+        "text": null,
+        "reason": "no approved knowledge entry is available for this test, so MediRead does not describe it",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "your_reported_result",
+        "kind": "fact",
+        "permitted": true,
+        "text": "Your report lists 29.7 U/mL for CA-125.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "comparison_with_reference",
+        "kind": "comparison",
+        "permitted": true,
+        "text": "The printed reference is \"Less than 30.2 U/ml\". The reported value satisfies that bound.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "what_this_may_generally_indicate",
+        "kind": "education",
+        "permitted": false,
+        "text": null,
+        "reason": "no approved knowledge entry is available for this test",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "important_limitations",
+        "kind": "limitation",
+        "permitted": true,
+        "text": "MediRead does not have an approved description for this test, so it cannot explain what the result means. MediRead does not have your symptoms, medical history, medicines or other test results, and cannot assess how urgent any result is.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "sources",
+        "kind": "reference",
+        "permitted": false,
+        "text": null,
+        "reason": "no sources to cite for an unsupported test",
+        "sources": [],
+        "partial": false
+      }
+    ],
+    "warnings": [
+      "test not in knowledge base"
+    ],
+    "facts": {
+      "value_text": "29.7",
+      "unit_text": "U/mL",
+      "reference_text": "Less than 30.2 U/ml",
+      "value_kind": "numeric",
+      "comparison_state": "satisfies_one_sided_reference"
+    }
+  },
+  "F10_missing_range_question": {
+    "result_id": "ecd72c8f6995",
+    "report_id": "c66749371af7e28c",
+    "page": 16,
+    "section": "Glucose and HbA1c",
+    "test_name": "FASTING BLOOD SUGAR(GLUCOSE)",
+    "test_id": null,
+    "canonical_name": "Fasting blood glucose",
+    "knowledge_status": "partial",
+    "knowledge_coverage": "partial",
+    "knowledge_review_status": "unsupported",
+    "status": "partially_explained",
+    "permitted": {
+      "what_this_test_measures": true,
+      "your_reported_result": true,
+      "comparison_with_reference": false,
+      "what_this_may_generally_indicate": true,
+      "important_limitations": true,
+      "sources": true
+    },
+    "gates": {
+      "identify_test": true,
+      "interpret_value": true,
+      "unit_comparison": true,
+      "range_comparison": false
+    },
+    "blocked_reasons": [
+      "comparison_with_reference: reference is missing"
+    ],
+    "comparison": {
+      "state": "blocked_by_gate",
+      "value_text": "92.9",
+      "unit_text": "mg/dL",
+      "reference_text": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "operator": null,
+      "stratified": false,
+      "description": null
+    },
+    "allowed_numbers": [
+      "92.9"
+    ],
+    "sections": [
+      {
+        "key": "what_this_test_measures",
+        "kind": "education",
+        "permitted": true,
+        "text": "Fasting blood glucose. Glucose is the body's main source of energy; a fasting glucose test measures the amount of glucose in the blood after not eating for a period. It is used to screen for or monitor diabetes. MediRead has only a general description for this test because the approved sources do not cover it in detail.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cmp",
+          "mp_lab_hba1c"
+        ],
+        "partial": true
+      },
+      {
+        "key": "your_reported_result",
+        "kind": "fact",
+        "permitted": true,
+        "text": "Your report lists 92.9 mg/dL for FASTING BLOOD SUGAR(GLUCOSE).",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "comparison_with_reference",
+        "kind": "comparison",
+        "permitted": false,
+        "text": null,
+        "reason": "reference is missing",
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "what_this_may_generally_indicate",
+        "kind": "education",
+        "permitted": true,
+        "text": "The result is a concentration, usually in mg/dL or mmol/L. This is general education about the test, not a statement about your health.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cmp",
+          "mp_lab_hba1c"
+        ],
+        "partial": true
+      },
+      {
+        "key": "important_limitations",
+        "kind": "limitation",
+        "permitted": true,
+        "text": "The reference interval printed on your report is specific to the laboratory that produced it; intervals from other laboratories are not interchangeable. A result outside the printed interval may or may not reflect a health problem, and a result inside the interval does not by itself guarantee health. MediRead does not have your symptoms, medical history, medicines or other test results, and cannot assess how urgent any result is.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "sources",
+        "kind": "reference",
+        "permitted": true,
+        "text": "Comprehensive Metabolic Panel (CMP) \u2014 MedlinePlus, U.S. National Library of Medicine. https://medlineplus.gov/lab-tests/comprehensive-metabolic-panel-cmp/ (accessed 2026-11-07). Hemoglobin A1C (HbA1c) Test \u2014 MedlinePlus, U.S. National Library of Medicine. https://medlineplus.gov/lab-tests/hemoglobin-a1c-hba1c-test/ (accessed 2026-11-07). Source: MedlinePlus, National Library of Medicine.",
+        "reason": null,
+        "sources": [
+          "mp_lab_cmp",
+          "mp_lab_hba1c"
+        ],
+        "partial": false
+      }
+    ],
+    "warnings": [
+      "comparison with the reference range withheld",
+      "knowledge entry is partial"
+    ],
+    "facts": {
+      "value_text": "92.9",
+      "unit_text": "mg/dL",
+      "reference_text": null,
+      "value_kind": "numeric",
+      "comparison_state": "blocked_by_gate"
+    }
+  },
+  "F09_contradictory_information": {
+    "result_id": "synthetic-conflict",
+    "report_id": "synthetic",
+    "page": 1,
+    "section": "CBC / Hemogram",
+    "test_name": "HEMOGLOBIN",
+    "test_id": null,
+    "canonical_name": null,
+    "knowledge_status": "unsupported",
+    "knowledge_coverage": "unsupported",
+    "status": "withheld",
+    "gates": {
+      "identify_test": false,
+      "interpret_value": false,
+      "unit_comparison": false,
+      "range_comparison": false
+    },
+    "permitted": {
+      "what_this_test_measures": false,
+      "your_reported_result": true,
+      "comparison_with_reference": false,
+      "what_this_may_generally_indicate": false,
+      "important_limitations": true,
+      "sources": false
+    },
+    "blocked_reasons": [
+      "conflicting rows"
+    ],
+    "comparison": null,
+    "allowed_numbers": [],
+    "warnings": [
+      "conflicting values"
+    ],
+    "facts": {
+      "value_text": null,
+      "unit_text": null,
+      "reference_text": null,
+      "value_kind": "numeric",
+      "comparison_state": null
+    },
+    "sections": [
+      {
+        "key": "your_reported_result",
+        "kind": "fact",
+        "permitted": true,
+        "text": "The report lists two different haemoglobin values for the same test on the same page: 9.0 g/dL and 13.5 g/dL.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      },
+      {
+        "key": "important_limitations",
+        "kind": "limitation",
+        "permitted": true,
+        "text": "The two rows for this test carry different values, so MediRead cannot decide which one is correct. It will not average them or choose one.",
+        "reason": null,
+        "sources": [],
+        "partial": false
+      }
+    ]
+  }
+}

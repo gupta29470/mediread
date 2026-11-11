@@ -1,0 +1,37 @@
+# Pinned Linux conversion environment for the LiteRT-LM export.
+# Verified against PyPI metadata on 2026-11-09 (see reports/conversion-review.md).
+#
+# torch: 2.15.0 EXISTS on PyPI but litert-torch 0.10.0 requires torch<2.15.0, so the
+#        resolver picks 2.14.1. Pinning 2.15.0 here was wrong: it is incompatible,
+#        not nonexistent.
+torch==2.14.1
+# transformers: litert-torch 0.10.0 imports transformers.cache_utils
+# .LinearAttentionCacheLayerMixin, which exists only in 5.x. The 4.x CLI break does not
+# affect us: we call `python -m litert_torch.generative.export_hf` (fire entrypoint),
+# not the litert-torch CLI.
+transformers==5.22.2
+# tensorflow: not declared by litert-torch, but `export_hf` imports
+# tensorflow.lite.python.schema_py_generated at import time via its extension
+# registry. The litert-torch README lists tf-nightly as a requirement.
+#
+# 2.21.0, not 2.16.2/2.19.1: litert-lm-builder 0.18.1 ships generated protobuf modules that
+# import google.protobuf.runtime_version (protobuf >= 5.26). TensorFlow 2.16 caps
+# protobuf at <5 (TF 2.19 caps it at <6), while the builder's generated code is
+# gencode 6.31.1 and refuses to load with an older runtime. TF 2.21 requires
+# protobuf >=6.31.1, which matches the builder exactly.
+tensorflow==2.21.0
+protobuf==6.31.1
+litert-torch==0.10.0
+# builder: litert-torch 0.10.0 calls litertlm_builder.TfLiteModelType.PREFILL_DECODE
+# while packaging. 0.19.x removed that module-level enum (it now uses protobuf
+# enums), and litert-torch only requires ">=0.18.0", so pip installs a broken
+# combination by default. 0.18.1 is the newest builder that still exposes it.
+litert-lm-builder==0.18.1
+# sentencepiece 0.2.3 ships protobuf gencode 7.36.1 and refuses a 6.x runtime;
+# 0.2.1 has no runtime-version check and works with protobuf 6.31.1.
+sentencepiece==0.2.1
+# NOTE: do NOT install litert-lm here. litert-lm==0.19.1 hard-pins
+# litert-lm-builder==0.19.1, which is incompatible with builder 0.18.1.
+# The runtime CLI lives in a separate venv (see the Kaggle notebook, §2).
+ai-edge-litert==2.3.0
+numpy==1.26.4
