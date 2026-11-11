@@ -563,8 +563,8 @@ class _HowItWorks extends StatelessWidget {
           const SizedBox(height: 8),
           const Text(
             'Your report is parsed on the device. The deterministic engine verifies values, '
-            'units and ranges before anything is shown. The AI model only rewrites approved '
-            'text — it never calculates and never sees withheld values.',
+            'units and ranges before anything is shown. It never calculates on your behalf '
+            'and never guesses a missing value.',
             style: TextStyle(
               color: Clinical.inkSecondary,
               height: 1.45,

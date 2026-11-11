@@ -1,59 +1,35 @@
 # MediRead
 
 Privacy-first, fully on-device understanding of laboratory reports. MediRead turns a PDF or a
-photo of a lab report into structured results with page-level provenance, explains them with a
-deterministic engine, and optionally has a small on-device language model rewrite that
-explanation in plain language — while every number, unit, range and permission stays under
-deterministic control.
+photo into structured results with page-level provenance, verifies every value, unit and printed
+range in code, and explains the result from a versioned knowledge base.
 
 No report data leaves the device. There is no cloud inference, no telemetry and no account.
 
 > **Learning project.** MediRead is a self-directed engineering build, not a product. It exists
-> to learn the whole path from a PDF to a guarded on-device explanation: OCR and table
-> extraction, deterministic medical logic, knowledge gating, LoRA fine-tuning, LiteRT-LM export
-> and Android app engineering. Everything here is open for reading and reuse, but it is not a
-> medical device.
+> to learn the path from a PDF to a guarded on-device explanation: OCR and table extraction,
+> deterministic medical logic, knowledge gating and Android app engineering. Everything here is
+> open for reading and reuse, but it is not a medical device.
 >
 > MediRead is an educational report-understanding tool, not a diagnostic system.
 > Nothing in this repository is clinically validated.
 
 ## Highlights
 
-- **On-device end to end** — OCR, extraction, knowledge lookup, explanations and the optional
-  model rewrite all run locally.
+- **On-device end to end** — text extraction, OCR, verification, explanations and provenance all
+  run on the device.
 - **Deterministic safety** — test identification, numeric interpretation, reference-range
-  comparison, unit handling, field-level permissions and knowledge approval are decided by code.
-  The model only rewrites text that has already been approved.
-- **Two downloadable models** — Medi Lite (~614 MB) and Medi Super (~2.39 GB), one active at a
-  time, SHA-256 verified, loaded and smoke-tested before the app reports Ready.
+  comparison, unit handling and field-level permissions are decided by code. Ambiguous, unknown
+  or unapproved results are withheld with a reason, never guessed.
 - **Verbatim provenance** — every extracted field keeps its page and bounding box, and every
   explanation states what was withheld and why.
-- **Reproducible pipeline** — versioned knowledge package, versioned SFT dataset, LoRA
-  fine-tuning script and a pinned LiteRT-LM export environment.
+- **Versioned knowledge** — 81 entries, 18 sources and 288 evidence records; an explanation is
+  only produced for an approved entry.
 
-## Demos
+## Demo
 
-Two short screen recordings of MediRead on Android.
-
-| Medi Lite — Compact AI | Medi Super — Detailed AI |
-|---|---|
-| <video src="https://github.com/user-attachments/assets/fa9ea955-d243-45d0-9577-eb64a19864b0" controls muted width="300"></video> | <video src="https://github.com/user-attachments/assets/756d1bba-1a7e-467d-bced-5306214c0708" controls muted width="300"></video> |
-| 613.7 MB · dynamic INT8 | 2.39 GB · float32 |
-
-## What this project demonstrates
-
-- **On-device ML end to end** — page routing between embedded text and OCR, structured extraction,
-  a deterministic explanation engine, LoRA fine-tuning of Qwen3-0.6B, LiteRT-LM export and an
-  Android runtime behind a Flutter UI.
-- **Safety engineering** — the model is never the decision maker. Test identification, numbers,
-  units, ranges, permissions and knowledge approval stay in code, and generated text is validated
-  before display.
-- **Model evaluation** — a 22-case behavioural contract with exact-token comparison, refusal
-  checks and explicit violation counts, run against both shipped models.
-- **App engineering** — two downloadable models with per-model state, a single active model,
-  resumable verified downloads, an activation state machine and release-build hardening.
-- **Honest measurement** — what was tested, on how many reports and cases, and what was not tested
-  is documented below instead of being implied.
+[Watch the app walkthrough](https://youtu.be/vYLK22f-utg) — import, verified extraction and
+explanations.
 
 ## How it works
 
@@ -61,23 +37,16 @@ Two short screen recordings of MediRead on Android.
 flowchart LR
   A[PDF / photo] --> B["Ingest<br/>embedded text + OCR"]
   B --> C["Structured results<br/>value · unit · range · bbox"]
-  C --> D["Deterministic explanation<br/>knowledge + per-field gates"]
-  D --> E{"Approved knowledge<br/>and all gates open?"}
-  E -- no --> F["Deterministic answer only"]
-  E -- yes --> G["On-device model rewrite"]
-  G --> H["Safety validator"]
-  H -- pass --> I["Model text"]
-  H -- fail --> F
+  C --> D["Deterministic verification<br/>test · value · unit · range"]
+  D --> E{"Identified, interpreted<br/>and approved?"}
+  E -- no --> F["Withheld, with the reason"]
+  E -- yes --> G["Explanation from the knowledge base"]
 ```
 
-The gate is explicit and conservative: a result reaches the model only when the test was
-identified, the value interpreted, the unit and range confirmed where required, and the
-knowledge entry's review status is exactly `approved`. In every other case the deterministic
-explanation is shown and no inference is run.
-
-The validator rejects generated text that invents numbers or sources, drops the reported value or
-printed range, drops the educational/not-a-diagnosis statement, or adds diagnosis, treatment or
-urgency claims. A rejected generation falls back to the deterministic text.
+The gate is explicit and conservative: a result is explained only when the test was identified,
+the value interpreted, the unit and range confirmed where required, and the knowledge entry's
+review status is exactly `approved`. In every other case the result is flagged and shown with the
+reason instead of being guessed.
 
 ## Architecture
 
@@ -86,51 +55,11 @@ urgency claims. A rejected generation falls back to the deterministic text.
 | Ingestion | `src/mediread/ingest`, `src/mediread/ocr` | Page inspection, digital/OCR/hybrid routing, reading order, extraction contract |
 | Structured results | `src/mediread/structured` | Test/value/unit/range extraction with field-level status and provenance |
 | Knowledge | `src/mediread/knowledge`, `knowledge/` | Versioned, reviewed entries, aliases, sources, FTS retrieval |
-| Explanations | `src/mediread/explain` | Deterministic composition, per-field gates, model-input contract |
-| Training data | `src/mediread/training`, `datasets/` | Deterministic SFT example generation, validation and splits |
-| Mobile app | `app/` | Flutter UI, Dart extraction/explanation pipeline, LiteRT-LM Android bridge, model library |
-| Tooling | `tooling/`, `scripts/`, `docker/`, `notebooks/` | Fine-tuning, merge, export, inspection and evaluation scripts |
+| Explanations | `src/mediread/explain` | Deterministic composition, per-field gates |
+| Mobile app | `app/` | Flutter UI, Dart extraction and explanation pipeline |
+| Tooling | `tooling/`, `scripts/`, `docker/`, `notebooks/` | Inspection, evaluation and earlier model-training/export scripts |
 
 The complete ingestion design is documented in [`docs/architecture.md`](docs/architecture.md).
-
-## Models
-
-| Product | Base model | Build | Weight precision | Size | Runtime |
-|---|---|---|---|---|---|
-| **Medi Lite — Compact AI** | Qwen3 0.6B | Official LiteRT-LM build, no fine-tune | dynamic INT8 weights, float KV | ~614 MB | LiteRT-LM 0.19.1 |
-| **Medi Super — Detailed AI** | Qwen3 0.6B | LoRA-tuned on the MediRead SFT set | float32 | ~2.39 GB | LiteRT-LM 0.19.1 |
-
-Medi Lite is the small, fast option that ships the base model. Medi Super is the fine-tuned export
-that follows the MediRead output contract most closely. The app downloads a model only after
-explicit consent, verifies its pinned SHA-256, and deletes anything that does not match. Only one
-model is loaded at a time; switching releases the current engine before loading the next.
-
-Model binaries are **not** committed. They are downloaded in the app, and their digests are pinned
-in `app/lib/src/ai/model_artifact.dart`.
-
-### Why is Medi Super about 4× larger?
-
-Both models have the same **~0.6 billion parameters**. Fine-tuning does not add parameters at
-inference: the LoRA adapter is merged into the base weights and then discarded, so the shipped
-model is still a plain 0.6B checkpoint. The size difference is *weight precision*, not extra
-knowledge or extra layers.
-
-| Build | Weight precision | Bytes per parameter | Approximate weights | File |
-|---|---|---|---|---|
-| Medi Lite | dynamic INT8 | 1 | ~0.6 GB | 613.7 MB |
-| Medi Super | float32 (FP32) | 4 | ~2.39 GB | 2.39 GB |
-
-The arithmetic is the whole story: `0.6B × 1 byte ≈ 0.6 GB` versus `0.6B × 4 bytes ≈ 2.4 GB`.
-A float32 weight needs four bytes; an INT8 weight needs one, so FP32 is ~4× the file size. The
-remaining few megabytes are metadata, tokenizer and the LiteRT-LM sections.
-
-The file size covers weights only. Runtime memory adds the KV cache and activations on top, so
-Medi Super is also heavier in RAM while loaded.
-
-**Why ship FP32 for the tuned model?** Because it is the build that reproduced the Hugging Face
-reference token-for-token on all 22 contract cases. Lower precision was measured and rejected:
-an INT8 export of the tuned model (0.61 GB) scored 21/22 with the ambiguous-refusal regression,
-and an INT4 export (315 MB) produced degenerate output. The extra ~1.8 GB buys contract fidelity, at the cost of storage and load time.
 
 ## Evaluation
 
@@ -147,64 +76,30 @@ the counts below are what the pipeline and explanation layers were evaluated on.
 | Explanations | 208 fully explained, 86 partially explained, 31 withheld |
 | Knowledge package | 81 entries (75 draft, 6 reviewed), 18 sources, 288 evidence records |
 
-### Model contract — 22 cases
-
-`tooling/eval_bundle_contract.py` builds 22 cases from the reviewed knowledge package:
-18 answerable results (6 tests × inside/above/below), 3 refusals (`R.unknown`, `R.ambiguous`,
-`R.draft`) and 1 blocked-facts case. All runs use greedy decoding, the production prompt and the
-same validator. “Behaviour correct” means the output was grounded, introduced no number outside
-the permitted context, cited no unapproved source, kept the refusal behaviour and stayed in format.
-
-| Model | Exact token match vs HF | Behaviour correct | Refusals passed | Safety violations | Median latency / case |
-|---|---|---|---|---|---|
-| **Medi Super** (FP32, LoRA) | 22/22 | 22/22 | 3/4 | 0 | 8.7–15.7 s |
-| **Medi Lite** (16-bit base) | 1/22 | 21/22 | 2/4 | 0 | 6.4 s |
-| INT8 0.61 GB (rejected, not shipped) | — | 21/22 (R.ambiguous) | 2/4 | 0 | — |
-
-Reading the table:
-
-- Medi Super is token-identical to the Hugging Face FP32 reference on all 22 cases.
-- Medi Lite is a different (un-tuned) model, so exact-token agreement is expected to be low; it
-  still behaves correctly on 21/22. Its one miss is the ambiguous-result refusal — the same case
-  the rejected INT8 build got wrong.
-- No model produced an invented number, an unapproved source, a permission violation or a format
-  failure. The one dangerous failure mode observed was refusal drift, which the app's gate blocks
-  before any model call (ambiguous/unknown/draft/blocked results never reach inference).
-
-### On-device checks (Android emulator)
-
-| Check | Medi Lite | Medi Super |
-|---|---|---|
-| Download + SHA-256 verification | pass | pass |
-| Load + smoke prompt before Ready | pass | pass |
-| Offline AI rewrite (airplane mode) | not measured | pass, 38.75 s |
-| Switching models both ways | pass | pass |
-| Physical phone benchmarks | pending | pending |
-
 ### What this does not prove
 
 - No clinical validation, no diagnostic accuracy claim.
-- The 22 cases are behavioural contract checks, not a broad medical benchmark.
-- Emulator timings are not phone timings; POCO F5 / OPPO Reno 8T measurements are still pending.
-- The base-model miss on `R.ambiguous` is a model limitation; the app mitigates it with the
-  deterministic gate and the output validator, not by trusting the model.
+- The corpus is a development check, not a broad medical benchmark.
+- OCR and table extraction vary by report producer; uncertain fields are flagged rather than
+  guessed.
+- Timings measured on an emulator are not phone timings.
 
 ## Repository layout
 
 ```text
-src/mediread/        Python engine: ingest, OCR, structured results, knowledge, explanations, training
-app/                 Flutter application (Dart pipeline + LiteRT-LM Android bridge)
+src/mediread/        Python engine: ingest, OCR, structured results, knowledge, explanations
+app/                 Flutter application (Dart extraction and explanation pipeline)
 tests/               pytest suite for the Python engine
-tooling/             fine-tuning, merge, export, inspection and evaluation scripts
-datasets/            versioned SFT dataset (mediread-sft-v0)
 knowledge/           versioned knowledge package
 docs/architecture.md ingestion architecture (the only published document)
-notebooks/           LiteRT-LM export notebooks (Colab and Kaggle)
-scripts/             export entry point
-docker/              pinned Linux export image
+datasets/            versioned SFT dataset (earlier model work, not part of the app flow)
+tooling/             inspection, evaluation and earlier training/export scripts
+scripts/             export entry point (earlier model work)
+docker/              pinned Linux export image (earlier model work)
+notebooks/           export notebooks (earlier model work)
 ```
 
-Patient reports, local models, evaluation results and generated artifacts are gitignored.
+Patient reports, models, evaluation results and generated artifacts are gitignored.
 
 ## Getting started (Python)
 
@@ -245,93 +140,37 @@ flutter build apk --release
 adb install -r build/app/outputs/flutter-apk/app-release.apk
 ```
 
-On the device, open **Settings → On-device AI**, download a model, then activate it. Activation
-shows its live state (checking → loading → test prompt → Ready); once active, everything works
-offline, including airplane mode.
-
-## Fine-tuning
-
-**Medi Super** is a LoRA adapter on [`Qwen/Qwen3-0.6B`](https://huggingface.co/Qwen/Qwen3-0.6B),
-trained on the deterministic SFT set in `datasets/mediread-sft-v0`. **Medi Lite** uses the
-official base build without fine-tuning, which is why its contract result differs (§ Evaluation).
-
-### Dataset
-
-`mediread-sft-v0` is generated by `src/mediread/training` from the knowledge package and the
-explanation templates — no teacher model is used. The committed splits (train / validation /
-test) and the dataset card are the exact files used for training.
-
-### Train
-
-```bash
-pip install torch transformers peft
-python tooling/train_lora.py --smoke        # 4 steps, sanity check
-python tooling/train_lora.py                # 2 epochs, LoRA r=8, alpha=16
-```
-
-Key options: `--epochs`, `--rank`, `--alpha`, `--dropout`, `--lr`, `--max-len`, `--batch`,
-`--grad-accum`, `--seed`. Checkpoints are selected by validation loss. Outputs land in
-`artifacts/training/lora-qwen3-0.6b/` (gitignored).
-
-### Merge
-
-```bash
-python tooling/merge_lora.py                # adapter -> merged-fp16 checkpoint
-```
-
-### Export to LiteRT-LM
-
-The export runs in Linux because the converter and TensorFlow conflict on macOS.
-
-```bash
-docker build -f docker/Dockerfile.export -t mediread-export .
-docker run --rm -v "$PWD:/work" -w /work mediread-export \
-  bash scripts/export_litertlm.sh
-```
-
-That script produces a quantized bundle. For the full-precision artifact used by **Medi Super**:
-
-```bash
-python -m litert_torch.generative.export_hf \
-  --model=artifacts/training/lora-qwen3-0.6b/merged-fp16 \
-  --litert_lm_llm_metadata_override=.cache/litertlm/LlmMetadataProto.pbtext \
-  --quantization_recipe=none --model_dtype=float32 \
-  --output_dir=artifacts/litertlm/qwen3-0.6b-fp32
-```
-
-`tooling/quantize_bundle.py` can re-quantize an existing bundle without re-exporting.
-`notebooks/` contains the Colab and Kaggle equivalents of the export environment.
+The app explains reports without network access; leave airplane mode on and it still works.
 
 ## Tests
 
 ```bash
-.venv/bin/python -m pytest        # Python engine, contracts, gates, training data
-cd app && flutter test            # Flutter app, model library, safety gates, widgets
+.venv/bin/python -m pytest        # Python engine, contracts, gates, extraction
+cd app && flutter test            # Flutter app, gates, widgets
 cd app && flutter analyze
 ```
 
 ## Safety and privacy
 
-- Knowledge reaches the model only when its review status is exactly `approved`; draft, reviewed,
-  ambiguous, unknown and blocked results never invoke inference.
-- The deterministic engine owns test identification, numeric interpretation, reference-range
-  comparison, unit conversion, field permissions and ambiguity handling.
-- Generated text is validated for invented numbers, unapproved sources, dropped values/ranges,
-  missing limitations and prohibited diagnosis/treatment/urgency claims.
-- A deterministic explanation is always available; the model is optional.
-- Model files are downloaded on consent and verified by SHA-256 before use. Unverified bytes are
-  deleted, never loaded.
+- Test identification, numeric interpretation, reference-range comparison, unit conversion,
+  field permissions and ambiguity handling are decided by code, not by a model.
+- An explanation is only produced for an approved knowledge entry; ambiguous, unknown, draft and
+  blocked results are shown with the reason.
+- Every extracted field keeps its page and bounding box, so a claim can be traced back to the
+  report.
 - No network calls carry report data; no analytics or telemetry.
 - Patient reports and derived artifacts are excluded from version control.
 
 ## Limitations
 
 - Not a medical device and not clinically validated; explanations are educational only.
-- A 0.6B model bounds rewrite quality. Every output is validated, and bad generations fall back.
 - OCR and table extraction vary by report producer; uncertain fields are flagged rather than
   guessed.
-- Medi Super needs ~2.39 GB of free storage and is noticeably slower on low-end CPUs.
-- The base model behind Medi Lite drifts on the ambiguous-refusal case when tested directly.
-  The app blocks ambiguous results before inference, so users still get the deterministic answer,
-  but this is why Medi Super is the closer fit for the output contract.
+- The 10-report corpus is a development check, not a benchmark.
 - Performance figures in the repository come from an emulator, not from physical phones.
+
+## Status
+
+The repository also contains an earlier experimental on-device model path (LoRA training, LiteRT
+export and model downloads in the app). It is not part of the current explanation flow and is not
+covered by this README.
