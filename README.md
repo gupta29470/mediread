@@ -33,12 +33,12 @@ No report data leaves the device. There is no cloud inference, no telemetry and 
 
 ## Demos
 
-Short screen recordings of the two models on Android (click a card to play the MP4):
+Two short screen recordings of MediRead on Android.
 
 | Medi Lite — Compact AI | Medi Super — Detailed AI |
 |---|---|
-| [![Medi Lite demo](demo/mediread-lite-poster.jpg)](https://cdn.jsdelivr.net/gh/gupta29470/mediread@master/demo/mediread-lite.mp4) | [![Medi Super demo](demo/mediread-super-poster.jpg)](https://cdn.jsdelivr.net/gh/gupta29470/mediread@master/demo/mediread-super.mp4) |
-| 613.7 MB · INT8 · activation + offline use | 2.39 GB · FP32 · download, switch and AI rewrite |
+| <video src="https://github.com/user-attachments/assets/fa9ea955-d243-45d0-9577-eb64a19864b0" controls muted width="300"></video> | <video src="https://github.com/user-attachments/assets/756d1bba-1a7e-467d-bced-5306214c0708" controls muted width="300"></video> |
+| 613.7 MB · dynamic INT8 | 2.39 GB · float32 |
 
 ## What this project demonstrates
 
