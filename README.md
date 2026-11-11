@@ -86,10 +86,10 @@ The complete ingestion design is documented in [`docs/architecture.md`](docs/arc
 
 ## Models
 
-| Product | Base model | Build | Size | Runtime |
-|---|---|---|---|---|
-| **Medi Lite — Compact AI** | Qwen3 0.6B | Official 16-bit LiteRT-LM build (no fine-tune) | ~614 MB | LiteRT-LM 0.19.1 |
-| **Medi Super — Detailed AI** | Qwen3 0.6B FP32 | LoRA-tuned on the MediRead SFT set, exported FP32 | ~2.39 GB | LiteRT-LM 0.19.1 |
+| Product | Base model | Build | Weight precision | Size | Runtime |
+|---|---|---|---|---|---|
+| **Medi Lite — Compact AI** | Qwen3 0.6B | Official LiteRT-LM build, no fine-tune | dynamic INT8 weights, float KV | ~614 MB | LiteRT-LM 0.19.1 |
+| **Medi Super — Detailed AI** | Qwen3 0.6B | LoRA-tuned on the MediRead SFT set | float32 | ~2.39 GB | LiteRT-LM 0.19.1 |
 
 Medi Lite is the small, fast option that ships the base model. Medi Super is the fine-tuned export
 that follows the MediRead output contract most closely. The app downloads a model only after
@@ -98,6 +98,30 @@ model is loaded at a time; switching releases the current engine before loading 
 
 Model binaries are **not** committed. They are downloaded in the app, and their digests are pinned
 in `app/lib/src/ai/model_artifact.dart`.
+
+### Why is Medi Super about 4× larger?
+
+Both models have the same **~0.6 billion parameters**. Fine-tuning does not add parameters at
+inference: the LoRA adapter is merged into the base weights and then discarded, so the shipped
+model is still a plain 0.6B checkpoint. The size difference is *weight precision*, not extra
+knowledge or extra layers.
+
+| Build | Weight precision | Bytes per parameter | Approximate weights | File |
+|---|---|---|---|---|
+| Medi Lite | dynamic INT8 | 1 | ~0.6 GB | 613.7 MB |
+| Medi Super | float32 (FP32) | 4 | ~2.39 GB | 2.39 GB |
+
+The arithmetic is the whole story: `0.6B × 1 byte ≈ 0.6 GB` versus `0.6B × 4 bytes ≈ 2.4 GB`.
+A float32 weight needs four bytes; an INT8 weight needs one, so FP32 is ~4× the file size. The
+remaining few megabytes are metadata, tokenizer and the LiteRT-LM sections.
+
+The file size covers weights only. Runtime memory adds the KV cache and activations on top, so
+Medi Super is also heavier in RAM while loaded.
+
+**Why ship FP32 for the tuned model?** Because it is the build that reproduced the Hugging Face
+reference token-for-token on all 22 contract cases. Lower precision was measured and rejected:
+an INT8 export of the tuned model (0.61 GB) scored 21/22 with the ambiguous-refusal regression,
+and an INT4 export (315 MB) produced degenerate output. The extra ~1.8 GB buys contract fidelity, at the cost of storage and load time.
 
 ## Evaluation
 

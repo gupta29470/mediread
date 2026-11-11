@@ -108,7 +108,7 @@ class ModelArtifact {
     description:
         'A lightweight AI model that helps explain your medical reports in '
         'simple language. Requires less storage and a smaller download.',
-    technicalDetails: 'LiteRT-LM, 16-bit weights, runtime 0.19.1',
+    technicalDetails: 'LiteRT-LM, dynamic INT8 weights, runtime 0.19.1',
   );
 
   /// Validated FP32 build (2.39 GB), served from Google Drive.
