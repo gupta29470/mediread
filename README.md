@@ -169,8 +169,25 @@ cd app && flutter analyze
 - The 10-report corpus is a development check, not a benchmark.
 - Performance figures in the repository come from an emulator, not from physical phones.
 
-## Status
+## Model work (experimental)
 
-The repository also contains an earlier experimental on-device model path (LoRA training, LiteRT
-export and model downloads in the app). It is not part of the current explanation flow and is not
-covered by this README.
+The repository also contains the earlier model path. It is not part of the current explanation
+flow and is not required to run the app:
+
+- [`tooling/train_lora.py`](tooling/train_lora.py) — LoRA fine-tune of Qwen3-0.6B on
+  `datasets/mediread-sft-v0`, with validation-loss checkpoint selection.
+- [`tooling/merge_lora.py`](tooling/merge_lora.py) — merge the adapter into an FP16 or FP32
+  checkpoint.
+- [`tooling/quantize_bundle.py`](tooling/quantize_bundle.py) — re-quantize an existing LiteRT-LM
+  bundle without re-exporting.
+- [`scripts/export_litertlm.sh`](scripts/export_litertlm.sh),
+  [`docker/Dockerfile.export`](docker/Dockerfile.export) and [`notebooks/`](notebooks) — the pinned
+  Linux export environment.
+- [`datasets/mediread-sft-v0`](datasets/mediread-sft-v0) — the committed SFT splits and dataset
+  card.
+
+```bash
+pip install torch transformers peft
+python tooling/train_lora.py --smoke      # 4 steps, sanity check
+python tooling/train_lora.py              # 2 epochs, LoRA r=8, alpha=16
+```
